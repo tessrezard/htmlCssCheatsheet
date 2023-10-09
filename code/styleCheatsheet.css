@@ -1,0 +1,1145 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+    --primary: #c1b1ff;
+    --secondary: #d6e9b1;
+    --green: #a2c88b;
+    --yellow: #FFD913;
+    --orange: #f8b281;
+    --pink: #ffdffc;
+    --red: #f191bb;
+    --purple: #9e91f1;
+} 
+
+/* accent and base colours are seperated for easier ease of JS access to accent colours 
+
+/* Base Colours */
+:root {
+    --main: #3c5bce;
+    --background: #fff4ec;    
+    --mainText: #000000;
+    --resizeBoxBorder: #5b4caf;
+
+}
+
+/* ------ sematic elements styling ------ */
+
+body {
+  font-size: 1em;
+  /* Defining font sizes in px is not accessible, because the user cannot change the font size in some browsers. */
+  font-family: Arial, sans-serif;
+  /* background-color: rgba(218, 240, 172, 0.667); */
+  background-color: var(--purple);
+  background-color: var(--background);
+
+
+  display: flex;
+  flex-flow: column wrap;
+
+}
+
+
+header {
+  padding: 0.5em;
+  height: fit-content;
+  width: 100%;
+  /* overflow: visible; */
+  /* box-sizing: border-box;
+  overflow-y: auto; */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--main);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+
+h1 {
+  font-size: 3em;
+  font-family: 'calibri';
+  font-weight: bold;
+  font-size: 48px;
+  color: var(--main);
+}
+
+h2 {
+  font-size: 1.75em;
+  margin: 7px auto;
+  padding: 0.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 5px auto;
+  padding: 0.3em;
+}
+
+h4 {
+  font-size: 1.25em;
+  margin: 5px auto;
+  padding: 0.2em;
+  letter-spacing: 0.1em;
+}
+
+h6 {
+  margin: 2px;
+  width: fit-content;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+section {
+  width: 90vw;
+  margin: 1em auto 2em;
+  max-width: 60em;
+  border-radius: 20px;
+  border: 7px solid var(--primary);
+  padding: 2em;
+  background-color: var(--background);
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+/*title banner*/
+
+.titleContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: absolute;
+  padding: 5%;
+  width: 100%;
+}
+
+title {
+  align-content: center;
+  margin: 10px auto;
+  padding: 1em;
+  position: fixed;
+  /* top: 0.3em;   */
+  margin: 1em auto;
+  z-index: 5;
+}
+
+.subTitle {
+  color: var(--main);
+  padding: 2em;
+  align-self: center;
+}
+
+.starsContainer {
+  height: 10em;
+  width: 100%;
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes starSideToside{
+  30% {
+       transform: translate(5px, 5px);
+  }
+
+  70% {
+    transform: translate(-5px, 0px);
+  }
+}
+
+.star {
+  /* margin: 1%; */
+  width: 1em;
+  height: 1em;
+  font-size: 1.75rem;
+  z-index: 1;
+  position: relative;
+}
+
+.star:hover {
+  color: var(--background);
+  transform: translate(-5px, 0px);
+}
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+
+
+.star1 {
+  color: var(--primary);
+  position: relative;
+  top: 20%;
+}
+.star1:hover {
+  animation: starSideToside 1s ease-out infinite 3 ;
+
+}
+
+.star2 {
+  color: var(--secondary);
+  top: 60%;
+  right: 5%
+}
+.star3 {
+  color: var(--green);
+  top: 18%;
+  right: 5%;
+}
+.star4 {
+  color: var(--yellow);
+  top: 5%;
+  right: 8%;
+}
+.star5 {
+  color: var(--orange);
+  top: 75%;
+  right: 10%;
+}
+.star6 {
+  color: var(--pink);
+  top: 18%;
+  left: 1%;
+}
+.star7 {
+  color: var(--red);
+  top: 65%;
+  left: 5%;
+}
+.star8 {
+  color: var(--purple);
+  top: 20%;
+  left: 1%;
+}
+.star9 {
+  color: var(--primary);
+  top: 5%;
+  left: 5%;
+}
+.star10 {
+  color: var(--secondary);
+  top: 75%;
+  left: 5%;
+}
+.star11 {
+  color: var(--green);
+  top: 10%;
+  left: 5%;
+}
+.star12 {
+  color: var(--yellow);
+  top: 50%;
+  left: 5%;
+}
+.star13 {
+  color: var(--orange);
+  top: 13%;
+  left: 1%;
+}
+
+.starDance {
+  animation: starSideToside 1s ease-out 500ms 3 ;
+}
+
+.starDance1 {
+  animation: starSideToside 1.2s ease-in 3s 1 alternate;
+}
+
+.starDance2 {
+  animation: starSideToside 1.2s ease-in 1s 1 alternate;
+}
+
+.starDance3 {
+  animation: starSideToside 0.8s ease-in 90ms 2 reverse;
+}
+
+
+/* --- nav & nav buttons styling -------------------------------------------- */
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 2%;
+  /* border: 2px solid var(--primary); */
+
+}
+
+.navBtnWrapper {
+  height: 3em;
+  width: 5em;
+  margin: 0 5px;
+  /* border: 2px solid var(--primary); */
+}
+
+/* ---end of nav & nav buttons styling ----------------------------------------- */
+
+
+
+/* --- link buttons styling --- */
+
+a {
+  position: relative;
+  bottom: 10px;
+  text-decoration: none;
+  padding: 0.5em;
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  background-color: var(--primary);
+  margin: 10px auto;
+  display: inline-block;
+  cursor: pointer;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 6px 5px 2px 1px rgba(0, 0, 255, .2);
+  transition: all 300ms; 
+}
+
+/* NOTE : the order of for link rules so tat the casade properly
+  :link
+  :visited
+  :hover
+  :active */
+
+
+a:link,
+a:visited {
+  color: rebeccapurple;
+}
+
+
+a:hover {
+  /* text-decoration: underline; */
+  background-color: #a08deb;
+  font-style: italic;
+
+}
+
+a:active {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+  border: 2px solid var(--primary);
+  margin: 15px 0px 0 5px;
+}
+
+/* --- end of link buttons styling --- */
+
+
+
+/* --- table styling --- */
+
+table {
+  border: 2px solid var(--primary);
+  width: 80vw;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+
+thead {
+  background-color: var(--primary);
+}
+
+th {
+  padding: 4px;
+}
+
+tr {
+  height: 1.5em;
+  padding: 4px;
+}
+
+td {
+  border: 1px solid var(--primary);
+  padding: 4px;
+}
+
+/* ---end table styling --- */
+
+/* ------ end sematic elements styling ------ */
+
+
+
+
+.pillHeadingContainer {
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-flow: wrap;
+  position: relative;
+  top: -55px;
+}
+
+
+.pillHeadingWrapper {
+  /* this is the pill heading properties*/
+  z-index: 9;
+  background-color: var(--primary);
+  /* display: flex;
+  flex-flow: column wrap; */
+  border-radius: 20px;
+  position: absolute;
+}
+
+.pillHeading {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: .05;
+  font-weight: bold;
+  /* font-size: 3vw; */
+
+}
+
+.code {
+  font-family: monospace;
+  background-color: rgb(255, 237, 98);
+  background-color: var(--yellow);
+  width: fit-content;
+}
+
+.preamble {
+  display:flex;
+  justify-content: center;
+  margin: 1em;
+  
+}
+
+/* ----------see more: buttons---------- */
+
+.seeMoreContainer {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: 5px;
+  color: var(--main);
+
+}
+
+.seeMoreWrapper {
+  height: 3em;
+  /* border: 2px solid var(--primary); */
+
+}
+
+a.seeMoreBtn {
+  color: var(--main);
+  position: relative;
+  top: -3px;
+  padding: 0.3em;
+  border-radius: 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow:6px 5px 2px 1px rgba(0, 0, 255, .2);
+}
+
+a.seeMoreBtn:active {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+  border: 2px solid var(--primary);
+  margin: 15px 0px 0 10px;
+}
+
+/* ----------end of see more: buttons---------- */
+
+
+.contentContainer {
+  border: 4px solid var(--primary);
+  border-radius: 7px;
+  width: 80vw;
+  max-width: 50em;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.subContentContainer {
+  margin: 0em;
+  align-items: self-end;
+  border-bottom: 2px solid var(--primary);
+  padding: 0.5em 0.5em;
+}
+
+.examples {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: self-end;
+  /* border: 1px solid var(--primary); */
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.userResizable {
+  overflow: scroll;
+  resize: horizontal;
+  max-width: 100%;
+  min-width: 186px;
+  border: 1em solid var(--resizeBoxBorder‚);
+  border: 1em solid var(--pink);
+
+  padding: 1em;
+  /* i dont know how to get rind of the wihte border */
+  /* text-align: center; */
+}
+
+
+.userResizableY {
+  overflow: scroll;
+  resize: both;
+  max-height: 100vh;
+  min-height: 10%;
+  align-items: flex-start;
+}
+
+.growExample {
+  width: 70%;
+}
+
+.shrinkExample {
+  width: 100%;
+  /* min-width: 333px; */
+
+}
+
+/* I WANT TO CONDENSE AND SWEETEN THE CASE CONTAINERS */
+
+.caseContainer {
+  /* display: flex; */
+  /* flex-flow: column wrap; */
+  text-align: center;
+  width: 30%;
+  min-width: 135px;
+  height: 10%;
+  /* border: 1px solid var(--primary); */
+  margin: 0.3em;
+  /* align-self: self-end; */
+}
+
+.caseContainerResizes {
+  flex-grow: 1;
+}
+
+.caseContainerResizesBigger {
+  min-width: 90%;
+  height: 10%;
+}
+
+.caseContainerResizesMid {
+  min-width: 50%;
+  min-height: 150px;
+  align-items: flex-start;
+}
+
+
+.case {
+  display: flex;
+  min-height: 5em;
+  /* width: 100%; */
+  border: 1.5px solid var(--primary);
+}
+
+.caseMid {
+  padding: 0.25em;
+  min-height: 7em;
+  align-items: flex-start;
+
+
+}
+
+.caseBigger {
+  margin: 0.5em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.caseCode {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.caseCode1Box {
+  display: flex;
+  flex-flow: column;
+}
+
+.box {
+  height: 1.5em;
+  width: 1.5em;
+  min-width: none;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  margin: 1px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  font-family: monospace;
+}
+
+.boxBigger {
+  height: 80px;
+  width: 80px;
+  min-width: none;
+  min-height: 3em;
+  margin: 5px 15px;
+}
+
+.boxMid {
+  height: 50px;
+  width: 50px;
+  min-width: none;
+  min-height: 3em;
+  margin: 2px 2px;
+}
+
+.boxResizeX {
+  min-width: none;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  margin: 1px 1px;
+}
+
+
+.boxResize {
+  min-width: none;
+  min-height: none;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  margin: 1px 1px;
+}
+
+.boxResizeY {
+  min-height: none;
+  width: 1.5em;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  margin: 1px 1px;
+}
+
+.boxResizeShrinks {
+  min-width: 70px;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  margin: 1px 1px;
+}
+
+
+
+
+.subContentContainer p {
+  margin: 5px;
+  padding: 5px;
+  ;
+}
+
+
+
+.center {
+  height: 2em;
+}
+
+
+
+
+
+/* ----------------justify-content-------------- */
+.JCFlexStart {
+  justify-content: flex-start;
+}
+
+.JCFlexEnd {
+  justify-content: flex-end;
+}
+
+.JCCenter {
+  justify-content: center;
+}
+
+.JCSpaceAround {
+  justify-content: space-around;
+}
+
+.JCSpaceBetween {
+  justify-content: space-between;
+}
+
+.JCSpaceEvenly {
+  justify-content: space-evenly;
+}
+
+/* ----------------end justify-content-------------- */
+
+
+
+/* ----------------align-items-------------- */
+.AIFlexStart {
+  align-items: flex-start;
+}
+
+.AIFlexEnd {
+  align-items: flex-end;
+}
+
+.AICenter {
+  align-items: center;
+}
+
+.AIBaseline {
+  align-items: baseline;
+}
+
+.AIStretch {
+  align-items: stretch;
+}
+
+.AISelfend {
+  align-items: self-end;
+}
+
+/* ----------------end align-items-------------- */
+
+
+
+/* ----------------wrap-------------- */
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrapReverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* ----------------end wrap-------------- */
+
+
+/* ----------------align-content-------------- */
+.ACFlexStart {
+  align-content: flex-start;
+}
+
+.ACFlexEnd {
+  align-content: flex-end;
+}
+
+.ACCenter {
+  align-content: center;
+}
+
+.ACBaseline {
+  align-content: baseline;
+}
+
+.ACStretch {
+  align-content: stretch;
+}
+
+.ACSpaceAround {
+  align-content: space-around;
+}
+
+.ACSpaceBetween {
+  align-content: space-between;
+}
+
+/* ----------------end align-content-------------- */
+
+
+/* ----------------flex-basis-------------- */
+.FB60 {
+  flex-basis: 60px;
+}
+
+.FB150 {
+  flex-basis: 150px;
+}
+
+/* ----------------end flex-basis-------------- */
+
+
+/* ----------------flex-grow-------------- */
+.FG1 {
+  flex-grow: 1;
+}
+
+.FG2 {
+  flex-grow: 2;
+}
+
+.FG3 {
+  flex-grow: 3;
+}
+
+/* ----------------end flex-grow-------------- */
+
+
+/* ----------------flex-shrink-------------- */
+.FS0 {
+  flex-shrink: 0;
+}
+
+.FS1 {
+  flex-shrink: 1;
+}
+
+.FS2 {
+  flex-shrink: 2;
+}
+
+.FS3 {
+  flex-shrink: 3;
+}
+
+/* ----------------end flex-shrink-------------- */
+
+/* ----------------flex-------------- */
+
+.rightBoxFlexy1 {
+  flex: auto;
+}
+
+.middleBoxFlexy1 {
+  flex: auto;
+}
+
+.leftBoxFlexy1 {
+  flex: initial;
+}
+
+
+
+
+.rightBoxFlexy2 {
+  flex: 4;
+}
+
+.middleBoxFlexy2 {
+  flex: 2;
+}
+
+.leftBoxFlexy2 {
+  flex: 1;
+}
+
+
+
+.rightBoxFlexy3 {
+  flex: 1 1 8em;
+}
+
+.middleBoxFlexy3 {
+  flex: 2 2 8em;
+}
+
+.leftBoxFlexy3 {
+  flex: 4 4 8em;
+}
+
+/* ----------------end flex-------------- */
+.gridContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.grid1 {
+  width: 100%;
+  display: grid;
+  grid-template: repeat(13, 2em) / repeat(17, 2em);
+  gap: 1px;
+  padding: 9px auto;
+  margin: 9px auto;
+  /* border: 1px solid var(--primary); */
+  overflow: hidden;
+  resize: both;
+  border: 1em solid var(--pink);
+  max-width: 100%;
+  min-width: 340px;
+  max-height: 100%;
+  min-height: 195px;
+  width: 100%;
+
+}
+
+.grid1Item {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  text-align: center;
+}
+
+.grid1 .one {
+  grid-row: 1 / 6;
+  grid-column: 1 / span 5;
+}
+
+.grid1 .two {
+  grid-area: 1 / 6 / 9 / 9;
+}
+
+.grid1 .three {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 9;
+  grid-column-end: 12;
+}
+
+.grid1 .four {
+  grid-area: 4 / 9 / 9 / 12;
+}
+
+.grid1 .five {
+  grid-row-start: 1;
+  grid-column-start: span 5;
+  grid-row-end: span 7;
+  grid-column-end: 17;
+}
+
+.grid1 .six {
+  grid-area: 8 / 12 / span 1 / span 5;
+}
+
+
+.grid1 .seven {
+  grid-row: 6 / 13;
+  grid-column: 1 / 6;
+}
+
+.grid1 .eight {
+  grid-row: 9 / 13;
+  grid-column: 6 / 10;
+}
+
+.grid1 .nine {
+  grid-row-start: 9;
+  grid-column-start: 10;
+  grid-row-end: 13;
+  grid-column-end: 17;
+}
+
+.grid1 .ten {
+  grid-row: 6 / 13;
+  grid-column: 1 / 6;
+}
+
+
+.grid2 {
+  width: 100%;
+  display: grid;
+  grid-template: repeat(6, 50px) / repeat(6, 50px);
+  padding: 3px;
+  /* border: 1px solid var(--primary); */
+  overflow: hidden;
+  resize: both;
+  border: 1em solid rgb(255, 238, 255);
+  max-width: 100%;
+  min-width: 340px;
+  max-height: 100%;
+  min-height: 195px;
+  width: 100%;
+  align-content: end;
+}
+
+
+.grid2ItemOverlay {
+  border: 1px dashed rgb(0, 0, 0);
+}
+
+/* these are doing NOTHING */
+/* .grid2Item .one {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.grid2Item .two {
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.grid2Item .three {
+  grid-area: 1 / 3 / span 1 / span 1;
+}
+
+.grid2Item .four {
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.grid2Item .five {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.grid2Item .six {
+  grid-area: 2 / 5 / span 1 / span 1;
+} */
+
+
+
+
+
+/* ANIMATIONS!*/
+
+
+.xAxis {
+  /* add animation below */
+  animation: rightLeft 2s;
+
+}
+
+.yAxis {
+  /* add animation below */
+  animation: upDown 1s;
+
+}
+
+@keyframes rightLeft {
+  30% {
+    transform: translate(50px, 0px);
+  }
+
+  70% {
+    transform: translate(-50px, 0px);
+  }
+}
+
+@keyframes upDown {
+  30% {
+    transform: translate(0px, -25px);
+  }
+
+  70% {
+    transform: translate(0px, 25px);
+  }
+}  
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+
+
+
+
+@keyframes starSideToside{
+  30% {
+       transform: translate(5px, 5px);
+  }
+
+  70% {
+    transform: translate(-5px, 0px);
+  }
+}
+
+.star:hover {
+
+  animation: starSideToside 1s ease-out 500ms 3 ;
+}
+
+
+
+
+.text {
+  margin: 50 75;
+  font-family: 'calibri';
+  font-weight: bold;
+  font-size: 48px;
+  color: #2BAE66;
+}
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+
+
+.square1 {
+  background-color: #F7CED7FF;
+  animation: downThenUp 2s linear  infinite forwards;
+}
+
+.square2 {
+  background-color: #F99FC9FF;
+  animation: downThenUp 2s ease-in infinite backwards;
+}
+
+.square3 {
+  background-color: #EF6079FF;
+  animation: downThenUp 2s ease-out infinite both;
+}
+
+@keyframes downThenUp {
+  0% {
+    transform: translate(0px, 200px);
+  }
+
+  50% {
+    transform: translate(0px, 400px) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(0px, 200px);
+  }
+}
+
+
+
+.square {
+  float: left;
+  margin: 10px 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+
+.word1 {
+  color: #963CBDFF;
+  height: 50px;
+  animation: textRotate 5s 3s alternate infinite;
+}
+
+.word2 {
+  color: #FF6F61FF;
+  height: 30px;
+  animation: textRotate 5s 2s reverse infinite;
+}
+
+.word3 {
+  color: #C5299BFF;
+  height: 20px;
+  animation: textRotate 5s 1s alternate-reverse infinite;
+}
+
+@keyframes textRotate {
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.word {
+  width: 400;
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24;
+  bottom: 0;
+  transform-origin: bottom;
+  transform: rotate(180deg);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.wordwheel {
+  background-color: #FFE6FF;
+  overflow: hidden;
+  height: 700px;
+  width: 700px
+}

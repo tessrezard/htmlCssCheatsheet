@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML cheatsheet</title>
+  <link rel="stylesheet" href="./reset.css" type="text/css">
+  <link rel="stylesheet" href=".../main/code/style.css" type="text/css">
+  <link rel="stylesheet" href="./styleCheatsheet.css" type="text/css">
+
+</head>
+
+<body>
+  <header>
+    <div class="titleContainer">
+      <h1 class="title">Tess' HTML & CSS cheatsheet</h1>
+      <h2 class="subTitle">★ pure vanilla ★</h2>
+    </div>
+    <div class="starsContainer">
+      <div class="star star1 ">★</div>
+      <div class="star star2 starDance1">★</div>
+      <div class="star star3 starDance2">★</div>
+      <div class="star star4 starDance3">★</div>
+      <div class="star star5 starDance">★</div>
+      <div class="star star6 starDance1">★</div>
+      <div class="star star7 starDance3">★</div>
+      <div class="star star8 starDance1">★</div>
+      <div class="star star9 starDance2">★</div>
+      <div class="star star10 starDance3">★</div>
+      <div class="star star11 starDance2s">★</div>
+      <div class="star star12 starDance">★</div>
+      <div class="star star13 starDance1">★</div>
+    </div>
+    <nav>
+      <div class="navBtnWrapper ">
+        <a href="#tables" title="go to tables section">Tables</a>
+      </div>
+      <div class="navBtnWrapper ">
+        <a href="#flexbox" title="go to flexbox section">Flexbox</a>
+      </div>
+    </nav>
+
+    <p>Other useful resources: </p>
+    <p>https://maggieappleton.com/css-position</p>
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <!-- FLEXBOX -->
+  <section id="flexbox">
+
+    <!-- section header FLEXBOX-->
+    <div class="pillHeadingContainer ">
+      <div class="pillHeadingWrapper">
+        <h2 class="pillHeading">Flexbox</h2>
+      </div>
+    </div>
+
+    <!-- section body FLEXBOX-->
+
+    <!-- flex containers -->
+    <h3>Flex Container</h3>
+    <div class="preamble">
+      <p>Use the display property to define a flex container. Flex, inline-flex. </p>
+      <p class="code"> display: flex;</p>
+    </div>
+    <div class="contentContainer">
+
+      <!--sub content :justify-content property -->
+      <div class="subContentContainer">
+        <h4>✦ '<strong>justify-content</strong>' Property</h4>
+        <p>justify-content is used to space items along the <strong>main axis</strong>.</p>
+
+        <!-- examples -->
+        <div class="examples">
+
+          <div class="caseContainer ">
+            <h6 class="code">justify-content: flex-start;</h6>
+            <div class='case JCFlexStart'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">justify-content: flex-end;</h6>
+            <div class='case JCFlexEnd'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">justify-content: center;</h6>
+            <div class='case JCCenter'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">justify-content: space-around;</h6>
+            <div class='case JCSpaceAround'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">justify-content: space-between;</h6>
+            <div class='case JCSpaceBetween'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">justify-content: space-evenly;</h6>
+            <div class='case JCSpaceEvenly'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+        </div><!-- end of examples -->
+
+        <div class="seeMoreContainer">
+          <p>see more:</p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">justify-content - mozilla</a>
+          </div>
+        </div>
+
+      </div><!-- end of sub content :justify-content property -->
+
+      <!--sub content : align-items property -->
+      <div class="subContentContainer">
+        <h4>✦ '<strong>align-items</strong>' Property</h4>
+        <p>align-items is used to space items along the <strong>cross axis</strong>.</p>
+
+        <!-- examples -->
+        <div class="examples">
+
+          <div class="caseContainer ">
+            <h6 class="code">align-items: flex-start;</h6>
+            <div class='case AIFlexStart'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">align-items: flex-end;</h6>
+            <div class='case AIFlexEnd'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">align-items: center;</h6>
+            <div class='case AICenter'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">align-items: baseline;</h6>
+            <div class='case AIBaseline'>
+              <div class='box'></div>
+              <div class='boxResizeY center'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">align-items: stretch;</h6>
+            <div class='case AIStretch'>
+              <div class='boxResizeY'></div>
+              <div class='boxResizeY'></div>
+              <div class='boxResizeY'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer ">
+            <h6 class="code">align-items: self-end;</h6>
+            <div class='case AISelfend'>
+              <div class='box'></div>
+              <div class='box'></div>
+              <div class='box'></div>
+            </div>
+          </div>
+
+        </div><!-- end of examples -->
+
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items">align-items - mozilla</a>
+          </div>
+        </div>
+
+      </div><!-- end of sub content : align-items property  -->
+
+      <!--sub content : flex-wrap property -->
+      <div class="subContentContainer ">
+        <h4>✦ '<strong>flex-wrap </strong>' Property</h4>
+        <p>flex-wrap specifies that elements should shift along the <strong>cross axis</strong> if the flex container
+          is not large enough.<br></p>
+        <!-- examples -->
+        <div class="examples userResizable shrinkExample">
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6 class="code ">flex-wrap: wrap;</h6>
+              </div>
+            </div>
+            <div class='case caseBigger wrap'>
+              <div class='box boxBigger'>1</div>
+              <div class='box boxBigger '>2</div>
+              <div class='box boxBigger '>3</div>
+            </div>
+          </div>
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6 class="code ">flex-wrap: nowrap;</h6>
+              </div>
+            </div>
+            <div class='case caseBigger nowrap'>
+              <div class='box boxBigger'>1</div>
+              <div class='box boxBigger '>2</div>
+              <div class='box boxBigger '>3</div>
+            </div>
+          </div>
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6 class="code ">flex-wrap: wrap-reverse;</h6>
+              </div>
+            </div>
+            <div class='case caseBigger wrapReverse'>
+              <div class='box boxBigger'>1</div>
+              <div class='box boxBigger '>2</div>
+              <div class='box boxBigger '>3</div>
+            </div>
+          </div>
+        </div><!-- end of examples -->
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">flex-wrap -
+              mozilla</a>
+          </div>
+        </div>
+      </div><!-- end of sub content : flex-wrap property -->
+
+      <!--sub content : align-content property -->
+      <div class="subContentContainer ">
+        <h4>✦ '<strong>align-content </strong>' Property</h4>
+        <p>align-content is used to space rows along the<strong> cross axis</strong>.<br></p>
+        <!-- examples -->
+        <div class="examples shrinkExample userResizable">
+          I CANNOT FIGURE OUT HOW TO GET THE CASE CASECONTAINER TO RESIZE BOTH HORIZONTALLY AND VERTICALLY!!!
+          <div class="caseContainer caseContainerResizes userResizable userResizableY">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6 class="code ">flex-wrap: wrap;</h6>
+                <h6 class="code ">align-content: flex-start;</h6>
+              </div>
+            </div>
+            <div class='case caseMid wrap ACFlexStart'>
+              <div class='box'>1</div>
+              <div class='box '>2</div>
+              <div class='box '>3</div>
+              <div class='box '>4</div>
+              <div class='box '>5</div>
+              <div class='box '>6</div>
+              <div class='box '>7</div>
+            </div>
+          </div>
+          <div class="caseContainer  caseContainerResizes userResizable userResizableY">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6 class="code ">flex-wrap: wrap;</h6>
+                <h6 class="code ">align-content: flex-end;</h6>
+              </div>
+            </div>
+            <div class='case caseMid wrap ACFlexEnd'>
+              <div class='box'>1</div>
+              <div class='box '>2</div>
+              <div class='box '>3</div>
+              <div class='box '>4</div>
+              <div class='box '>5</div>
+              <div class='box '>6</div>
+              <div class='box '>7</div>
+            </div>
+          </div>
+          <div class="caseContainer  caseContainerResizes userResizable userResizableY">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6 class="code ">flex-wrap: wrap;</h6>
+                <h6 class="code ">align-content: center;</h6>
+              </div>
+            </div>
+            <div class='case caseMid wrap ACCenter'>
+              <div class='box'>1</div>
+              <div class='box '>2</div>
+              <div class='box '>3</div>
+              <div class='box '>4</div>
+              <div class='box '>5</div>
+              <div class='box '>6</div>
+              <div class='box '>7</div>
+            </div>
+          </div>
+          <div class="caseContainer  caseContainerResizes userResizable userResizableY ">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6 class="code ">flex-wrap: wrap;</h6>
+                <h6 class="code ">align-content: baseline;</h6>
+              </div>
+            </div>
+            <div class='case caseMid wrap ACBaseline'>
+              <div class='box boxMid'>1</div>
+              <div class='box boxMid '>2</div>
+              <div class='box boxMid '>3</div>
+              <div class='box boxMid '>4</div>
+              <div class='box boxMid '>5</div>
+              <div class='box boxMid '>6</div>
+              <div class='box boxMid '>7</div>
+            </div>
+          </div>
+
+        </div><!-- end of examples -->
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">flex-wrap -
+              mozilla</a>
+          </div>
+        </div>
+      </div><!-- end of sub content : align-content property -->
+
+    </div><!-- end of flex containers -->
+
+
+
+    <!-- flex items -->
+    <h3>Flex Items</h3>
+    <div class="contentContainer">
+
+      <!--sub content :flex-grow property -->
+      <div class="subContentContainer">
+        <h4>✦ '<strong>flex-grow</strong>' Property</h4>
+        <p>flex-grow is used to specify how much space (and in what proportions) flex items absorb along the
+          <strong> main axis</strong>. <br>Defaults to 0, so flex items will not grow unless declared. <br>Resize window
+          to see them grow.
+        </p>
+
+        <!-- examples -->
+        <div class="examples userResizable growExample">
+
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <h6>all ➛</h6>
+            <h6 class="code">flex-grow: 1;</h6>
+
+            <div class='case caseBigger'>
+              <div class='box boxBigger FG1'></div>
+              <div class='box boxBigger FG1'></div>
+              <div class='box boxBigger FG1'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <h6>middle box ➛</h6>
+            <h6 class="code">flex-grow: 1;</h6>
+
+            <div class='case caseBigger'>
+              <div class='box boxBigger'></div>
+              <div class='box boxBigger FG1'></div>
+              <div class='box boxBigger'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+
+            <h6>side boxes ➛</h6>
+            <h6 class="code">flex-grow: 2;</h6>
+            <h6>middle box ➛</h6>
+            <h6 class="code">flex-grow: 1;</h6>
+
+            <div class='case caseBigger'>
+              <div class='box boxBigger FG2'></div>
+              <div class='box boxBigger FG1'></div>
+              <div class='box boxBigger FG2'></div>
+            </div>
+          </div>
+
+        </div><!-- end of examples -->
+
+
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow">flex-grow - mozilla</a>
+          </div>
+        </div>
+
+      </div><!-- end of sub content :flex-grow property -->
+
+
+      <!--sub content : flex-shrink property -->
+      <div class="subContentContainer">
+        <h4>✦ '<strong>flex-shrink</strong>' Property</h4>
+        <p>flex-shrink is used to specify how much flex items shrink and in what proportions along the
+          <strong> main axis</strong>. <br>Defaults to 1, so flex items will shrink even if undeclared. <br>Resize
+          window to see them shrink.
+        </p>
+
+        <!-- examples -->
+        <div class="examples userResizable shrinkExample">
+
+          <div class="caseContainer caseContainerResizesBigger">
+            <h6>
+              side boxes ➛
+              <h6 class="code">flex-shrink: 3; <br></h6>
+            </h6>
+            <div class='case caseBigger'>
+              <div class='box boxBigger FS3'></div>
+              <div class='box boxBigger'></div>
+              <div class='box boxBigger FS3'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer caseContainerResizesBigger">
+            <h6>side boxes ➛</h6>
+            <h6 class="code">flex-shrink: 0;</h6>
+
+            <div class='case caseBigger'>
+              <div class='box boxBigger FS0'></div>
+              <div class='box boxBigger'></div>
+              <div class='box boxBigger FS0'></div>
+            </div>
+          </div>
+
+          <div class="caseContainer caseContainerResizesBigger">
+            <h6>middle box ➛</h6>
+            <h6 class="code">flex-shrink: 2;</h6>
+
+            <div class='case caseBigger '>
+              <div class='box boxBigger'></div>
+              <div class='box boxBigger FS2'></div>
+              <div class='box boxBigger'></div>
+            </div>
+          </div>
+
+        </div><!-- end of examples -->
+
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink">flex-shrink - mozilla</a>
+          </div>
+        </div>
+
+      </div><!-- end of sub content : flex-shrink property -->
+
+
+
+
+
+      <!--sub content : flex-basis property -->
+      <div class="subContentContainer">
+        <h4>✦ '<strong>flex-basis</strong>' Property</h4>
+        <p>flex-basis is used to specify the initial size of an element styled with flex-grow and/or flex-shrink.
+          <strong> main axis</strong>. <br> Defaults to 0, so flex items will not grow unless declared. <br> Resize
+          window to see.
+        </p>
+
+        <!-- examples -->
+        <div class="examples userResizable growExample">
+
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <h6> side boxes ➛ </h6>
+            <h6 class="code">flex-grow: 3;</h6>
+            <h6>middle box ➛ </h6>
+            <h6 class="code"> flex-basis: 60px;</h6>
+            <div class='case caseBigger'>
+              <div class='box  FG3 '></div>
+              <div class='box  FB60'></div>
+              <div class='box FG3 '></div>
+            </div>
+          </div>
+
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <h6>side boxes ➛</h6>
+            <h6 class="code">flex-shrink: 3; <br> flex-basis: 150px; </h6>
+
+            <div class='case caseBigger'>
+              <div class='box boxBigger FS3 FB150'></div>
+              <div class='box boxBigger'></div>
+              <div class='box boxBigger FS3 FB150'></div>
+            </div>
+          </div>
+
+        </div><!-- end of examples -->
+
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis">flex-basis - mozilla</a>
+          </div>
+        </div>
+
+      </div><!-- end of sub content : flex-basis property -->
+
+
+      <!--sub content : flex property -->
+      <div class="subContentContainer ">
+        <h4>✦ '<strong>flex </strong>' Property</h4>
+        <p>flex is used to specify flex-grow, flex-shrink, and flex-basis in one declaration.<br><br>
+        <p>➛ One value, unitless number: <strong>flex-grow</strong> . flex-basis is then equal to 0. </p>
+        <p class="code">flex: 2;</p>
+        <p>➛ One value, width/height: <strong>flex-basis</strong></p>
+        <p class="code">
+          flex: 10em;<br>
+          flex: 30%;<br>
+          flex: min-content;<br>
+        </p>
+        <p>➛ Two values: <strong>flex-grow | flex-basis</strong></p>
+        <p class="code"> flex: 1 30px;</p>
+        <p>➛ Two values: <strong>flex-grow | flex-shrink</strong></p>
+        <p class="code"> flex: 2 2;</p>
+        <p>➛ Three values: <strong>flex-grow | flex-shrink | flex-basis</strong> </p>
+        <p class="code"> flex: 2 2 10%;</p>
+        <!-- examples -->
+        <div class="examples userResizable growExample">
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6>right & middle box ➛</h6>
+                <h6 class="code ">flex: auto;</h6>
+              </div>
+              <div class="caseCode1Box">
+                <h6>left box ➛</h6>
+                <h6 class="code ">flex: initial;</h6>
+              </div>
+            </div>
+            <div class='case caseBigger '>
+              <div class='box boxBigger rightBoxFlexy1'>auto</div>
+              <div class='box boxBigger middleBoxFlexy1'>auto</div>
+              <div class='box boxBigger leftBoxFlexy1'>initial</div>
+            </div>
+          </div>
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6>right box ➛</h6>
+                <h6 class="code ">flex: 4;</h6>
+              </div>
+              <div class="caseCode1Box">
+                <h6>middle box ➛</h6>
+                <h6 class="code ">flex: 2;</h6>
+              </div>
+              <div class="caseCode1Box">
+                <h6>left box ➛</h6>
+                <h6 class="code ">flex: 1;</h6>
+              </div>
+            </div>
+            <div class='case caseBigger '>
+              <div class='box boxBigger rightBoxFlexy2'>4</div>
+              <div class='box boxBigger middleBoxFlexy2'>2</div>
+              <div class='box boxBigger leftBoxFlexy2'>1</div>
+            </div>
+          </div>
+          <div class="caseContainer  caseContainerResizes caseContainerResizesBigger">
+            <div class="caseCode">
+              <div class="caseCode1Box">
+                <h6>right box ➛</h6>
+                <h6 class="code ">flex: 1 1 8em;</h6>
+              </div>
+              <div class="caseCode1Box">
+                <h6>middle box ➛</h6>
+                <h6 class="code ">flex: 2 2 8em;</h6>
+              </div>
+              <div class="caseCode1Box">
+                <h6>left box ➛</h6>
+                <h6 class="code ">flex: 4 4 8em;</h6>
+              </div>
+            </div>
+            <div class='case caseBigger '>
+              <div class='box boxBigger rightBoxFlexy3'></div>
+              <div class='box boxBigger middleBoxFlexy3'></div>
+              <div class='box boxBigger leftBoxFlexy3'></div>
+            </div>
+          </div>
+        </div><!-- end of examples -->
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">flex -
+              mozilla</a>
+          </div>
+        </div>
+      </div><!-- end of sub content : flex property -->
+
+    </div> <!--end of flex items -->
+
+
+  </section><!-- END OF FLEXBOX-->
+
+
+
+
+  <!-- TABLES -->
+  <section id="tables">
+    <!-- section header TABLES-->
+    <div class="pillHeadingContainer ">
+      <div class="pillHeadingWrapper">
+        <h2 class="pillHeading">HTML Table</h2>
+      </div>
+    </div>
+
+    <!-- section body TABLES-->
+    <h3>Table Tags</h3>
+    <table>
+      <thead>
+        <th>Tag</th>
+        <th>Name</th>
+        <th>Description</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><span class="code">&lt;table&gt;</span></td>
+          <!--using "&lt;table&gt;" to be able to type 'less than' and 'greater than' in the copy-->
+          <td>Table</td>
+          <td>The wrapper element for all HTML tables.</td>
+        </tr>
+
+        <tr>
+          <td><span class="code">&lt;thead&gt;</span></td>
+          <td>Table Head</td>
+          <td>The set of rows defining the column headers in a table.</td>
+        </tr>
+
+        <tr>
+          <td><span class="code">&lt;tbody&gt;</span></td>
+          <td>Table Body</td>
+          <td>The set of rows containing actual table data.</td>
+        </tr>
+
+        <tr>
+          <td><span class="code">&lt;tr&gt;</span></td>
+          <td>Table Row</td>
+          <td>The table row container.</td>
+        </tr>
+
+        <tr>
+          <td><span class="code">&lt;td&gt;</span></td>
+          <td>Table Data</td>
+          <td>The table row container.</td>
+        </tr>
+
+        <tr>
+          <td><span class="code">&lt;tfoot&gt;</span></td>
+          <td>Table Foot</td>
+          <td>The set of rows defining the footer in a table.</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h3>Table Attributes</h3>
+    <table>
+      <thead>
+        <th>Attribute</th>
+        <th>Name</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="code">colspan</span></td>
+          <td>Column Span</td>
+          <td>Defines how many columns a td element should span.</td>
+        </tr>
+        <tr>
+          <td><span class="code">rowspan</span></td>
+          <td>Row Span</td>
+          <td>Defines how many rows a td element should span.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="seeMoreContainer">
+      <p>see more: </p>
+      <div class="seeMoreWrapper">
+        <a target="_blank" class="seeMoreBtn" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables">tables
+          - mozilla</a>
+      </div>
+    </div>
+
+
+  </section><!-- END OF TABLES-->
+
+  <!-- GRID -->
+  <section id="grid">
+
+    <!-- section header Grid-->
+    <div class="pillHeadingContainer ">
+      <div class="pillHeadingWrapper">
+        <h2 class="pillHeading">Grid</h2>
+      </div>
+    </div>
+
+    <div class="gridContainer">
+      <div class="grid1">
+        <div class="grid1Item one">One</div>
+        <div class="grid1Item two">Two</div>
+        <div class="grid1Item three">Three</div>
+        <div class="grid1Item four">Four</div>
+        <div class="grid1Item five">Five</div>
+        <div class="grid1Item six">Six</div>
+        <div class="grid1Item seven">seven</div>
+        <div class="grid1Item eight">eight</div>
+        <div class="grid1Item nine">nine</div>
+        <div class="grid1Item ten">ten</div>
+      </div>
+    </div>
+
+  </section>
+  <!-- end of GRID -->
+
+</body>
+
+</html>
+
+
+
+<!-- 
+display: flex changes an element to a block-level container with flex items inside of it.
+display: inline-flex allows multiple flex containers to appear inline with each other.
+
+justify-content is used to space items along the main axis.
+align-items is used to space items along the cross axis.
+flex-grow is used to specify how much space (and in what proportions) flex items absorb along the main axis.
+flex-shrink is used to specify how much flex items shrink and in what proportions along the main axis.
+flex-basis is used to specify the initial size of an element styled with flex-grow and/or flex-shrink.
+flex is used to specify flex-grow, flex-shrink, and flex-basis in one declaration.
+flex-wrap specifies that elements should shift along the cross axis if the flex container is not large enough.
+align-content is used to space rows along the cross axis.
+
+flex-direction is used to specify the main and cross axes.
+flex-flow is used to specify flex-wrap and flex-direction in one declaration.
+Flex containers can be nested inside of each other by declaring display: flex or display: inline-flex for children of flex containers. -->
+
+
+
+
+
+
+<p class="text xAxis">Hello!</p>
+<p class="text yAxis">Goodbye!</p>
+
+
+
+<div>
+  <div class="square square1"></div>
+  <div class="square square2"></div>
+  <div class="square square3"></div>
+
+</div>
+
+
+<div class="wordwheel">
+  <p class="word1">It's me!</p>
+  <p class="word2">Hi!</p>
+  <p class="word3">I'm the problem it's me!</p>
+
+</div>
