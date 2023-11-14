@@ -1,0 +1,198 @@
+
+
+
+/* ----------------justify-content-------------- */
+.JCFlexStart {
+    justify-content: flex-start;
+  }
+  
+  .JCFlexEnd {
+    justify-content: flex-end;
+  }
+  
+  .JCCenter {
+    justify-content: center;
+  }
+  
+  .JCSpaceAround {
+    justify-content: space-around;
+  }
+  
+  .JCSpaceBetween {
+    justify-content: space-between;
+  }
+  
+  .JCSpaceEvenly {
+    justify-content: space-evenly;
+  }
+  
+  /* ----------------end justify-content-------------- */
+  
+  
+  
+  /* ----------------align-items-------------- */
+  .AIFlexStart {
+    align-items: flex-start;
+  }
+  
+  .AIFlexEnd {
+    align-items: flex-end;
+  }
+  
+  .AICenter {
+    align-items: center;
+  }
+  
+  .AIBaseline {
+    align-items: baseline;
+  }
+  
+  .AIStretch {
+    align-items: stretch;
+  }
+  
+  .AISelfend {
+    align-items: self-end;
+  }
+  
+  /* ----------------end align-items-------------- */
+  
+  
+  
+  /* ----------------wrap-------------- */
+  .wrap {
+    flex-wrap: wrap;
+  }
+  
+  .nowrap {
+    flex-wrap: nowrap;
+  }
+  
+  .wrapReverse {
+    flex-wrap: wrap-reverse;
+  }
+  
+  /* ----------------end wrap-------------- */
+  
+  
+  /* ----------------align-content-------------- */
+  .ACFlexStart {
+    align-content: flex-start;
+  }
+  
+  .ACFlexEnd {
+    align-content: flex-end;
+  }
+  
+  .ACCenter {
+    align-content: center;
+  }
+  
+  .ACBaseline {
+    align-content: baseline;
+  }
+  
+  .ACStretch {
+    align-content: stretch;
+  }
+  
+  .ACSpaceAround {
+    align-content: space-around;
+  }
+  
+  .ACSpaceBetween {
+    align-content: space-between;
+  }
+  
+  /* ----------------end align-content-------------- */
+  
+  
+  /* ----------------flex-basis-------------- */
+  .FB60 {
+    flex-basis: 60px;
+  }
+  
+  .FB150 {
+    flex-basis: 150px;
+  }
+  
+  /* ----------------end flex-basis-------------- */
+  
+  
+  /* ----------------flex-grow-------------- */
+  .FG1 {
+    flex-grow: 1;
+  }
+  
+  .FG2 {
+    flex-grow: 2;
+  }
+  
+  .FG3 {
+    flex-grow: 3;
+  }
+  
+  /* ----------------end flex-grow-------------- */
+  
+  
+  /* ----------------flex-shrink-------------- */
+  .FS0 {
+    flex-shrink: 0;
+  }
+  
+  .FS1 {
+    flex-shrink: 1;
+  }
+  
+  .FS2 {
+    flex-shrink: 2;
+  }
+  
+  .FS3 {
+    flex-shrink: 3;
+  }
+  
+  /* ----------------end flex-shrink-------------- */
+  
+  /* ----------------flex-------------- */
+  
+  .rightBoxFlexy1 {
+    flex: auto;
+  }
+  
+  .middleBoxFlexy1 {
+    flex: auto;
+  }
+  
+  .leftBoxFlexy1 {
+    flex: initial;
+  }
+  
+  
+  
+  
+  .rightBoxFlexy2 {
+    flex: 4;
+  }
+  
+  .middleBoxFlexy2 {
+    flex: 2;
+  }
+  
+  .leftBoxFlexy2 {
+    flex: 1;
+  }
+  
+  
+  
+  .rightBoxFlexy3 {
+    flex: 1 1 8em;
+  }
+  
+  .middleBoxFlexy3 {
+    flex: 2 2 8em;
+  }
+  
+  .leftBoxFlexy3 {
+    flex: 4 4 8em;
+  }

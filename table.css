@@ -1,0 +1,31 @@
+
+
+/* --- table styling --- */
+
+table {
+    border: 2px solid var(--primary);
+    max-width: 50em;
+    margin: 0 auto;
+  }
+  
+  
+  thead {
+    background-color: var(--primary);
+  }
+  
+  th {
+    padding: 4px;
+  }
+  
+  tr {
+    height: 1.5em;
+    padding: 4px;
+  }
+  
+  td {
+    border: 1px solid var(--primary);
+    padding: 4px;
+  }
+  
+  /* ---end table styling --- */
+  

@@ -1,0 +1,122 @@
+.gridContainer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  .grid1 {
+    display: grid;
+    grid-template: repeat(13) / repeat(17);
+    /* grid-template: repeat(13, 2em) / repeat(17, 2em); */
+    gap: 1px;
+    overflow: hidden;
+    resize: both;
+    border: 1em solid var(--resizeBoxBorder);
+    max-width: 100%;
+    min-width: 340px;
+    max-height: 1000px;
+    min-height: 150px;
+  
+  }
+  
+  .grid1Item {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    text-align: center;
+  }
+  
+  .grid1 .one {
+    grid-row: 1 / 6;
+    grid-column: 1 / span 5;
+  }
+  
+  .grid1 .two {
+    grid-area: 1 / 6 / 9 / 9;
+  }
+  
+  .grid1 .three {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 9;
+    grid-column-end: 12;
+  }
+  
+  .grid1 .four {
+    grid-area: 4 / 9 / 9 / 12;
+  }
+  
+  .grid1 .five {
+    grid-row-start: 1;
+    grid-column-start: span 5;
+    grid-row-end: span 7;
+    grid-column-end: 17;
+  }
+  
+  .grid1 .six {
+    grid-area: 8 / 12 / span 1 / span 5;
+  }
+  
+  
+  .grid1 .seven {
+    grid-row: 6 / 13;
+    grid-column: 1 / 6;
+  }
+  
+  .grid1 .eight {
+    grid-row: 9 / 13;
+    grid-column: 6 / 10;
+  }
+  
+  .grid1 .nine {
+    grid-row-start: 9;
+    grid-column-start: 10;
+    grid-row-end: 13;
+    grid-column-end: 17;
+  }
+  
+  .grid1 .ten {
+    grid-row: 6 / 13;
+    grid-column: 1 / 6;
+  }
+  
+  
+  
+  
+  
+  .grid2ItemOverlay {
+    border: 1px dashed rgb(0, 0, 0);
+  }
+  
+  /* these are doing NOTHING */
+  /* .grid2Item .one {
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+  
+  .grid2Item .two {
+    grid-area: 1 / 2 / span 1 / span 1;
+  }
+  
+  .grid2Item .three {
+    grid-area: 1 / 3 / span 1 / span 1;
+  }
+  
+  .grid2Item .four {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  
+  .grid2Item .five {
+    grid-area: 2 / 2 / span 1 / span 1;
+  }
+  
+  .grid2Item .six {
+    grid-area: 2 / 5 / span 1 / span 1;
+  } */
+
+  @media  (max-width: 380px) {
+    .grid1 {
+        min-width: 200px;
+      
+      }
+      
+  }
