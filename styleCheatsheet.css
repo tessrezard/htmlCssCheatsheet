@@ -32,6 +32,13 @@ body {
   margin: auto;
 }
 
+
+.❃{
+  font-size: 25rem;
+  margin: 20rem;
+  color: var(--main);
+}
+
 main{
   margin: auto;
   display: flex;
