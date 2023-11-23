@@ -32,13 +32,6 @@ body {
   margin: auto;
 }
 
-
-.❃{
-  font-size: 25rem;
-  margin: 20rem;
-  color: var(--main);
-}
-
 main{
   margin: auto;
   display: flex;
@@ -99,7 +92,7 @@ h4 {
 p {
   margin: 2px;
   width: fit-content;
-  font-size: 0.9em;
+  font-size: 1rem;
   color: var(--mainText);
 }
 strong {
@@ -291,6 +284,8 @@ a.seeMoreBtn:active {
   background-color: rgb(255, 237, 98);
   background-color: var(--yellow);
   width: fit-content;
+  font-size: 0.9rem;
+  color: var(--mainText);
 }
 
 .preamble {

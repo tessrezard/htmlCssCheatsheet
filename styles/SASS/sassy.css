@@ -1,0 +1,205 @@
+.sassVars {
+  display: flex;
+  flex-flow: column;
+}
+.sassVars div {
+  display: flex;
+  flex-direction: row;
+  height: 15px;
+}
+
+.colorBox {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  display: flex;
+  z-index: 3;
+}
+
+.box1 {
+  background-color: #94a7ff;
+}
+
+.box2 {
+  background-color: #cf94ff;
+}
+
+.box3 {
+  background-color: #fdad52;
+}
+
+.indentingCode {
+  margin-bottom: 1rem;
+  line-height: 1.2rem;
+  border: 10px solid #FFD913;
+  background-color: #edca1d;
+  margin-left: 0rem;
+}
+.indentingCode div {
+  margin-left: 0.75rem;
+  background-color: #d6c155;
+}
+.indentingCode div div {
+  margin-left: 1.5rem;
+  background-color: #e3d382;
+}
+.indentingCode div div div {
+  margin-left: 2.25rem;
+  background-color: #ded1a0;
+}
+.indentingCode div div div div {
+  margin-left: 3rem;
+  background-color: #f8f4de;
+}
+
+.sassyParent {
+  width: 200px;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #94a7ff;
+  border-top: 5px solid #cf94ff;
+  border-bottom: 5px solid #cf94ff;
+  border-right: 5px solid #fdad52;
+  border-left: 5px solid #fdad52;
+}
+.sassyParent:hover {
+  background-color: #fdad52;
+}
+.sassyParent:hover .sassyChild {
+  background-color: #94a7ff;
+}
+.sassyParent .sassyChild {
+  width: 70px;
+  height: 30px;
+  background-color: #fdad52;
+  margin: auto;
+}
+.sassyParent .sassyChild:hover {
+  background-color: #cf94ff;
+}
+
+.subSub {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-right: 3px solid #8ec380;
+  border-left: 3px solid #8ec380;
+  border-bottom: 3px solid #8ec380;
+  border-radius: 3px;
+}
+.subSub .subSubTitle {
+  color: #4f7d43;
+  font-size: 1.1rem;
+}
+.subSub .subSubTitle div {
+  margin-right: 2rem;
+}
+.subSub .subSubTitle p {
+  font-size: 1rem;
+}
+
+.orchid {
+  background: orchid;
+}
+
+.cornflowerblue {
+  background: cornflowerblue;
+}
+
+.orange {
+  background: orange;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(233, 227, 223);
+}
+
+.hearts {
+  color: #cf94ff;
+}
+
+.spades {
+  color: #94a7ff;
+}
+
+.clovers {
+  color: #cf94ff;
+}
+
+.diamonds {
+  color: #94a7ff;
+}
+
+.ray {
+  height: 30px;
+}
+
+.ray:nth-child(1) {
+  background: #c194ff;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(2) {
+  background: #ff94fd;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(3) {
+  background: #ff94bc;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(4) {
+  background: #ffac94;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(5) {
+  background: #ffec94;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(6) {
+  background: #d2ff94;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(7) {
+  background: #94ff96;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(8) {
+  background: #94ffd7;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(9) {
+  background: #94e7ff;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(10) {
+  background: #94a7ff;
+  width: 300px;
+  margin-left: 0px;
+}/*# sourceMappingURL=sassy.css.map */

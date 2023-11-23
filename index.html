@@ -6,13 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML cheat sheet</title>
-  <link rel="stylesheet" href="./reset.css" type="text/css">
-  <link rel="stylesheet" href=".../main/code/style.css" type="text/css">
-  <link rel="stylesheet" href="./styleCheatsheet.css" type="text/css">
-  <link rel="stylesheet" href="./flexbox.css" type="text/css">
-  <link rel="stylesheet" href="./table.css" type="text/css">
-  <link rel="stylesheet" href="./grid.css" type="text/css">
-  <link rel="stylesheet" href="./fonts.css" type="text/css">
+
+  <link rel="stylesheet" href="./styles/CSS/reset.css" type="text/css">
+  <link rel="stylesheet" href="./styles/CSS/styleCheatsheet.css" type="text/css">
+  <link rel="stylesheet" href="./styles/CSS/flexbox.css" type="text/css">
+  <link rel="stylesheet" href="./styles/CSS/table.css" type="text/css">
+  <link rel="stylesheet" href="./styles/CSS/grid.css" type="text/css">
+  <link rel="stylesheet" href="./styles/CSS/fonts.css" type="text/css">
+
+  <link rel="stylesheet" href="./styles/SASS/sassy.css" type="text/css">
 
   <link rel="icon" href="icon32x32.png" />
   <link rel="apple-touch-icon" href="icon32x32.png" />
@@ -52,6 +54,9 @@
       </div>
       <div class="navBtnWrapper ">
         <a href="#fonts" title="go to tables section" class="navItem">Fonts</a>
+      </div>
+      <div class="navBtnWrapper ">
+        <a href="#sass" title="go to tables section" class="navItem">Sass</a>
       </div>
     </nav>
 
@@ -795,10 +800,10 @@
         </p>
         <p>(this kind of seems like this just doesnt work with certain fonts. soz 🤷🏻‍♀️ ) </p>
         <p class="code">@font-face { <br />
-          font-family: 'Great Font (Luminari)'; <br/>
-          src: 
-          local('Font-Regular'), 
-          url(./fonts/Font-Regular.ttf) 
+          font-family: 'Great Font (Luminari)'; <br />
+          src:
+          local('Font-Regular'),
+          url(./fonts/Font-Regular.ttf)
           format('ttf');<br />
           }
         </p>
@@ -806,14 +811,14 @@
         <p class="fontFaced">
           Great Font (Luminari)
         </p>
-      <div class="seeMoreContainer">
-        <p>see more: </p>
-        <div class="seeMoreWrapper">
-          <a target="_blank" class="seeMoreBtn" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">
-            @font-face - mozilla
-          </a>
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">
+              @font-face - mozilla
+            </a>
+          </div>
         </div>
-      </div>
 
       </div>
       <div class="subContentContainer ">
@@ -825,7 +830,7 @@
           url("https://the-font-you-want");
         </p>
         <p> Then just use with font-family :
-          <p class="code">font-family: 'HWT Arabesque W00 Regular', serif;</p>
+        <p class="code">font-family: 'HWT Arabesque W00 Regular', serif;</p>
         </p>
         <p class="imported">
           HWT Arabesque W00 Regular
@@ -849,7 +854,7 @@
           rel="stylesheet"&gt;
         </p>
         <p> Then just use with font-family :
-          <div class="code">font-family: 'Sansita', sans-serif;</div>
+        <div class="code">font-family: 'Sansita', sans-serif;</div>
         </p>
         <p class="linked">
           Sansita
@@ -868,51 +873,425 @@
     </section><!-- END OF FONTS-->
 
 
+    <!-- SASS -->
+    <section id="sass">
+      <!-- section header FONTS-->
+      <div class="pillHeadingContainer ">
+        <div class="pillHeadingWrapper">
+          <h2 class="pillHeading">SASS</h2>
+        </div>
+      </div>
+      <h3>Syntax</h3>
+
+      <div class="contentContainer">
+
+        <p>be consistent in your naming convention</p>
+        <div class="subContentContainer ">
+
+
+          <h4>✦ variables </h4>
+          <p>be consistent in your naming convention</p>
+          <div class="code">
+            <div class="sassVars">
+              <div>
+                $color-1: #94a7ff;
+                <div class="colorBox box1"></div>
+              </div>
+              <div>
+                $color-2: #f394ff;
+                <div class="colorBox box2"></div>
+              </div>
+              <div>
+                $color-3: #fdad52;
+                <div class="colorBox box3"></div>
+              </div>
+              <div>
+                $standard-border: 5px solid $color-2;
+              </div>
+              <div>
+                $alternate-border: 5px solid $color-3;
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="subContentContainer ">
+          <h4>✦ nesting </h4>
+          <div class=" code indentingCode">
+            .sassyParent {
+            <div>
+              background-color: $color-1;<br>
+              border : {
+              <div>
+                top: $standard-border;
+              </div>
+              }<br>
+              .sassyChild {
+              <div>
+                background-color: $color-3;
+              </div>
+              }
+            </div>
+            }
+          </div>
+        </div>
+
+        <div class="subContentContainer ">
+          <h4>✦ & </h4>
+
+
+          <div class=" code indentingCode">
+            .sassyContainer {
+            <div>
+              &:hover{
+              <div>
+                background-color: $color-3;<br>
+                .sassyChild {
+                <div>
+                  background-color: $color-1;
+                </div>
+                }
+              </div>
+              }<br>
+              .sassyChild {
+              <div>
+                background-color: $color-3;<br>
+                &:hover{
+                <div>
+                  background-color: $color-2;
+                </div>
+                }
+              </div>
+              }
+            </div>
+            }
+          </div>
+
+          <!-- EXAMPLE FOR ALL SASS ABOVE -->
+          <div class="sassyParent">
+            <div class="sassyChild">
+            </div>
+          </div>
+          <!-- -->
+
+        </div>
+
+        <div class="subContentContainer ">
+
+          <h4>✦ Mixin : @mixin @include</h4>
+          <p>In Sass, a mixin lets you make groups of CSS declarations that you want to reuse throughout your site.</p>
+          <p>Mixin can (& should) take an argument(s) ($argument)</p>
+          <p>Mixin arguments can be assigned a default value in mixin definition.</p>
+
+          <div class=" code indentingCode">
+            @mixin dashed-border($width, $color: #fff) {
+            <div>
+              border: {
+              <div>
+                color: $color; <br>
+                width: $width; <br>
+                style: dashed; <br>
+              </div>
+              } <br>
+            </div>
+            } <br>
+            <br>
+            <br>
+            span {
+            <div>
+              @include dashed-border(3px);<br>
+              //only passes non-default argument
+            </div>
+            }<br>
+            <br>
+            <br>
+            p {
+            <div>
+              @include dashed-border(3px, green); <br>
+              //passes both arguments
+            </div>
+            } <br>
+            <br>
+            <br>
+            div {
+            <div>
+              @include dashed-border(color: purple, width: 5px); <br>
+              //passes out of order but explicitly defined <br>
+            </div>
+            } <br>
+          </div>
+
+        </div>
+
+        <div class="subContentContainer ">
+          <h4>✦ interpolation</h4>
+          <div class=" code indentingCode">
+            @mixin photo-content($file) {
+            <div>
+              content: url(#{$file}.jpg);<br>
+              //string interpolation
+            </div>
+            }
+          </div>
+        </div>
+
+      </div>
+
+      <h3>Logic</h3>
+      <div class="contentContainer">
+
+        <div class="subContentContainer ">
+          <h4>✦ <strong>Functions & operations </strong></h4>
+
+          <div class="subSub">
+            <p class="subSubTitle">Fade-out function</p>
+            <div>
+              <p>
+                fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
+                or the alpha channel, by that amount
+              </p>
+              <p class="code">
+                $faded-color-2: fade-out($color, $amount);
+              </p>
+            </div>
+          </div>
+
+          <div class="subSub">
+            <p class="subSubTitle"> Fade-in function</p>
+            <div>
+              <p>
+                The fade-in color function changes a color by increasing its opacity:
+              </p>
+              <p class="code">
+                $color-3: fade-in($color, $amount);
+              </p>
+            </div>
+          </div>
+
+          <div class="subSub">
+            <p class="subSubTitle">Adjust-hue function </p>
+            <div>
+              <p>
+                fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
+                or the alpha channel, by that amount
+              </p>
+              <p class="code">
+                $color2: adjust-hue($color, $degrees);
+              </p>
+            </div>
+          </div>
+
+          <div class="subSub">
+            <p class="subSubTitle"> numeric operations </p>
+            <div>
+              <div>
+                <p class="code">
+                  $color: #010203 + #040506; <br>
+                  height: $width/2; <br>
+                  line-height: $width/6; <br>
+                  border-radius: $width/30; <br>
+                  font-size: $width/6/2; <br>
+                </p>
+                <p>Particulars for / as a division operator:</p>
+                <p class="code">
+                  width: $variable/6; //division <br>
+                  line-height: (600px)/9; //division <br>
+                  margin-left: 20-10 px/ 2; //division <br>
+                  font-size: 10px/8px; //not division <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="subContentContainer ">
+          <h4>✦ <strong>Flow Control Rules</strong></h4>
+
+          <div class="subSub">
+            <p class="subSubTitle">@if @else </p>
+            <div>
+              <p>
+                fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
+                or the alpha channel, by that amount
+              </p>
+              <p class="code">
+                @if $expression-that-returns-true-or-false { ... }
+              </p>
+              <p class="code">
+                width: if( $condition, $value-if-true, $value-if-false);n
+              </p>
+              <div class="code indentingCode">
+                @mixin deck($suit) {
+                <div>
+                  @if($suit == diamonds or $suit == spades){
+                  <div>
+                    color: blue;
+                  </div>
+                  }
+                </div>
+                <div>
+                  @else-if($suit == clovers or $suit == hearts ){
+                  <div>
+                    color: red;
+                  </div>
+                  }
+                </div>
+                <div>
+                  @else{
+                  <div>
+                    //some rule
+                  </div>
+                  }
+                </div>
+                }
+              </div>
+
+              <div>
+                <div class="card hearts">
+                  <div class="hearts">Heart</div>
+                </div>
+                <div class="card spades">Spade</div>
+                <div class="card clovers">Clover</div>
+                <div class="card diamonds">Diamond</div>
+                <div class="card ">Unknown Suit</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="subSub">
+            <p class="subSubTitle">@each</p>
+            <div>
+              <p>
+                fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
+                or the alpha channel, by that amount
+              </p>
+
+              <div class="code indentingCode">
+                $list: (
+                <div>
+                  orchid, <br>
+                  cornflowerblue,<br>
+                  orange<br>
+                </div>
+                );<br>
+                <br>
+                // each-loop <br>
+                @each $item in $list {
+                <div>
+                  .#{$item} {
+                  <div>
+                    background: $item;
+                  </div>
+                  }
+                </div>
+                }
+              </div>
+
+              <div class="orchid"> div class="orchid"</div>
+              <div class="cornflowerblue"> div class="cornflowerblue"</div>
+              <div class="orange"> div class="orange"</div>
+
+            </div>
+          </div>
+
+
+
+          <div class="subSub">
+            <p class="subSubTitle">@for</p>
+            <div>
+              <p>
+                fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
+                or the alpha channel, by that amount
+              </p>
+              <div>
+                <p class="code">
+                  $total: 10; //Number of .ray divs in our html
+                </p>
+                <p class="code">
+                  $step: 360deg / $total; //Used to compute the hue based on color-wheel
+                </p>
+                <div class="code indentingCode">
+                  .ray {
+                  <div>
+                    height: 30px;
+                  </div>
+                  }
+                </div>
+
+                <div class="code indentingCode">
+                  //FOR LOOP : <br>
+                  @for $i from 1 through $total {
+                    <div>
+                  .ray:nth-child(#{$i}) {
+                    <div>
+                  background: adjust-hue($color-1, $i * $step); <br>
+                  width: if($i % 2==0, 300px, 350px); <br>
+                  margin-left: if($i % 2==0, 0px, 50px); <br>
+                </div>
+                  }
+                </div>
+                  }
+                </div>
+                
+              </div>
+
+              <div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+                <div class='ray'></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+
+
+
+        <div class="subSub">
+          <p class="subSubTitle">@while</p>
+          <div>
+            <p><strong>@while</strong></p>
+            <p>
+              fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
+              or the alpha channel, by that amount
+            </p>
+            <p class="code">
+              $color2: adjust-hue($color, $degrees);
+            </p>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+
+
+      <div class="seeMoreContainer">
+        <p>see more: </p>
+        <div class="seeMoreWrapper">
+          <a target="_blank" class="seeMoreBtn" href="https://sass-lang.com/documentation/">
+            @Sass documentation
+          </a>
+        </div>
+      </div>
+      </div>
+
+
+    </section><!-- END OF SASS-->
   </main>
 </body>
 
 </html>
-
-
-
-<!-- 
-display: flex changes an element to a block-level container with flex items inside of it.
-display: inline-flex allows multiple flex containers to appear inline with each other.
-
-justify-content is used to space items along the main axis.
-align-items is used to space items along the cross axis.
-flex-grow is used to specify how much space (and in what proportions) flex items absorb along the main axis.
-flex-shrink is used to specify how much flex items shrink and in what proportions along the main axis.
-flex-basis is used to specify the initial size of an element styled with flex-grow and/or flex-shrink.
-flex is used to specify flex-grow, flex-shrink, and flex-basis in one declaration.
-flex-wrap specifies that elements should shift along the cross axis if the flex container is not large enough.
-align-content is used to space rows along the cross axis.
-
-flex-direction is used to specify the main and cross axes.
-flex-flow is used to specify flex-wrap and flex-direction in one declaration.
-Flex containers can be nested inside of each other by declaring display: flex or display: inline-flex for children of flex containers. -->
-
-
-
-
-
-
-<!-- <p class="text xAxis">Hello!</p>
-<p class="text yAxis">Goodbye!</p>
-
-
-
-<div>
-  <div class="square square1"></div>
-  <div class="square square2"></div>
-  <div class="square square3"></div>
-
-</div>
-
-
-<div class="wordwheel">
-  <p class="word1">It's me!</p>
-  <p class="word2">Hi!</p>
-  <p class="word3">I'm the problem it's me!</p>
-
-</div> -->
