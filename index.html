@@ -1225,18 +1225,18 @@
                 <div class="code indentingCode">
                   //FOR LOOP : <br>
                   @for $i from 1 through $total {
+                  <div>
+                    .ray:nth-child(#{$i}) {
                     <div>
-                  .ray:nth-child(#{$i}) {
-                    <div>
-                  background: adjust-hue($color-1, $i * $step); <br>
-                  width: if($i % 2==0, 300px, 350px); <br>
-                  margin-left: if($i % 2==0, 0px, 50px); <br>
-                </div>
+                      background: adjust-hue($color-1, $i * $step); <br>
+                      width: if($i % 2==0, 300px, 350px); <br>
+                      margin-left: if($i % 2==0, 0px, 50px); <br>
+                    </div>
+                    }
+                  </div>
                   }
                 </div>
-                  }
-                </div>
-                
+
               </div>
 
               <div>
@@ -1252,27 +1252,23 @@
                 <div class='ray'></div>
               </div>
             </div>
-            </div>
           </div>
 
-
-
-
-        <div class="subSub">
-          <p class="subSubTitle">@while</p>
           <div>
-            <p><strong>@while</strong></p>
             <p>
-              fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
-              or the alpha channel, by that amount
+              @while is necessary for a few particularly complex stylesheets, you’re usually better of using either @each or @for if either of them will work. They’re clearer for the reader, and often faster to compile as well.
             </p>
-            <p class="code">
-              $color2: adjust-hue($color, $degrees);
-            </p>
+          </div>
+
+        <div class="seeMoreContainer">
+          <p>see more: </p>
+          <div class="seeMoreWrapper">
+            <a target="_blank" class="seeMoreBtn" href="https://sass-lang.com/documentation/at-rules/control/">
+              @Sass Flow Control Rules
+            </a>
           </div>
         </div>
-
-
+      </div>
 
 
       </div>
@@ -1287,6 +1283,7 @@
           </a>
         </div>
       </div>
+
       </div>
 
 

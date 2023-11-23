@@ -84,10 +84,8 @@
 .subSub {
   margin-bottom: 1rem;
   padding: 1rem;
-  border-right: 3px solid #8ec380;
-  border-left: 3px solid #8ec380;
-  border-bottom: 3px solid #8ec380;
-  border-radius: 3px;
+  border: 7px solid #d5eda5;
+  border-radius: 10px;
 }
 .subSub .subSubTitle {
   color: #4f7d43;
