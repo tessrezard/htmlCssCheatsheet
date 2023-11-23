@@ -144,60 +144,60 @@
 
 .ray:nth-child(1) {
   background: #c194ff;
-  width: 350px;
-  margin-left: 50px;
+  width: 200px;
+  margin-left: 0px;
 }
 
 .ray:nth-child(2) {
   background: #ff94fd;
-  width: 300px;
-  margin-left: 0px;
+  width: 150px;
+  margin-left: 50px;
 }
 
 .ray:nth-child(3) {
   background: #ff94bc;
-  width: 350px;
-  margin-left: 50px;
+  width: 200px;
+  margin-left: 0px;
 }
 
 .ray:nth-child(4) {
   background: #ffac94;
-  width: 300px;
-  margin-left: 0px;
+  width: 150px;
+  margin-left: 50px;
 }
 
 .ray:nth-child(5) {
   background: #ffec94;
-  width: 350px;
-  margin-left: 50px;
+  width: 200px;
+  margin-left: 0px;
 }
 
 .ray:nth-child(6) {
   background: #d2ff94;
-  width: 300px;
-  margin-left: 0px;
+  width: 150px;
+  margin-left: 50px;
 }
 
 .ray:nth-child(7) {
   background: #94ff96;
-  width: 350px;
-  margin-left: 50px;
+  width: 200px;
+  margin-left: 0px;
 }
 
 .ray:nth-child(8) {
   background: #94ffd7;
-  width: 300px;
-  margin-left: 0px;
+  width: 150px;
+  margin-left: 50px;
 }
 
 .ray:nth-child(9) {
   background: #94e7ff;
-  width: 350px;
-  margin-left: 50px;
+  width: 200px;
+  margin-left: 0px;
 }
 
 .ray:nth-child(10) {
   background: #94a7ff;
-  width: 300px;
-  margin-left: 0px;
+  width: 150px;
+  margin-left: 50px;
 }/*# sourceMappingURL=sassy.css.map */

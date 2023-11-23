@@ -14,8 +14,6 @@ $standard-border: 5px solid $color-2;
 $alternate-border: 5px solid $color-3;
 $indentation: 0.75rem;
 
-
-
 @mixin nested-indents($depth) {
     $indent: $depth * $indentation;
     margin-left: $indent;
@@ -25,14 +23,12 @@ $indentation: 0.75rem;
 .sassVars {
     display: flex;
     flex-flow: column;
-
     div {
         display: flex;
         flex-direction: row;
         height: 15px;
     }
 }
-
 .colorBox {
     height: 15px;
     width: 15px;
@@ -40,15 +36,12 @@ $indentation: 0.75rem;
     display: flex;
     z-index: 3;
 }
-
 .box1 {
     background-color: $color-1;
 }
-
 .box2 {
     background-color: $color-2;
 }
-
 .box3 {
     background-color: $color-3;
 }
@@ -100,7 +93,6 @@ line-height: 1.2rem;
 
     &:hover {
         background-color: $color-3;
-
         .sassyChild {
             background-color: $color-1;
         }
@@ -111,7 +103,6 @@ line-height: 1.2rem;
         height: 30px;
         background-color: $color-3;
         margin: auto;
-
         &:hover {
             background-color: $color-2;
         }
@@ -124,7 +115,7 @@ line-height: 1.2rem;
     padding: 1rem;
     border: 7px solid #d5eda5;
     border-radius: 10px;
-    
+
     .subSubTitle{
         color: #4f7d43;
         font-size: 1.1rem;
@@ -151,7 +142,7 @@ $list: (orchid, cornflowerblue
 
 
 
-// ---------------------IF ELSE IF 
+// ---------------------IF, ELSE IF 
 @mixin deck($suit) {
     @if($suit == diamonds or $suit == spades){
       color: $color-1;
@@ -173,7 +164,6 @@ $list: (orchid, cornflowerblue
     align-items: center;
     text-align: center;
     background-color: rgb(233, 227, 223);
-    
   }
 .hearts {
     @include deck(hearts);
@@ -192,7 +182,8 @@ $list: (orchid, cornflowerblue
   }
 
 
-  // ---------------------FOR LOOP
+
+// ---------------------FOR LOOP
 $total: 10; //Number of .ray divs in our html
 $step: 360deg / $total; //Used to compute the hue based on color-wheel
 .ray {
@@ -202,7 +193,7 @@ $step: 360deg / $total; //Used to compute the hue based on color-wheel
 @for $i from 1 through $total {
     .ray:nth-child(#{$i}) {
         background: adjust-hue($color-1, $i * $step);
-        width: if($i % 2==0, 300px, 350px);
-        margin-left: if($i % 2==0, 0px, 50px);
+        width: if($i % 2==0, 150px, 200px);
+        margin-left: if($i % 2==0, 50px, 0px);
     }
 }
