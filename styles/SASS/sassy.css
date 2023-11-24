@@ -5,7 +5,6 @@
 .sassVars div {
   display: flex;
   flex-direction: row;
-  height: 15px;
 }
 
 .colorBox {
@@ -14,6 +13,9 @@
   position: relative;
   display: flex;
   z-index: 3;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0.5rem;
 }
 
 .box1 {
@@ -30,26 +32,26 @@
 
 .indentingCode {
   margin-bottom: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.75rem;
   border: 10px solid #FFD913;
-  background-color: #edca1d;
+  background-color: #FFD913;
   margin-left: 0rem;
 }
 .indentingCode div {
   margin-left: 0.75rem;
-  background-color: #d6c155;
+  background-color: #efd44b;
 }
 .indentingCode div div {
   margin-left: 1.5rem;
-  background-color: #e3d382;
+  background-color: #f9e893;
 }
 .indentingCode div div div {
   margin-left: 2.25rem;
-  background-color: #ded1a0;
+  background-color: #fff5d1;
 }
 .indentingCode div div div div {
   margin-left: 3rem;
-  background-color: #f8f4de;
+  background-color: #ffffff;
 }
 
 .sassyParent {
@@ -90,6 +92,7 @@
 .subSub .subSubTitle {
   color: #4f7d43;
   font-size: 1.1rem;
+  font-weight: 700;
 }
 .subSub .subSubTitle div {
   margin-right: 2rem;
@@ -97,17 +100,11 @@
 .subSub .subSubTitle p {
   font-size: 1rem;
 }
-
-.orchid {
-  background: orchid;
-}
-
-.cornflowerblue {
-  background: cornflowerblue;
-}
-
-.orange {
-  background: orange;
+.subSub .sectionOfSubSub {
+  font-weight: 700px;
+  color: #4f7d43;
+  border-bottom: 1px solid #4f7d43;
+  margin: 1rem;
 }
 
 .card {
@@ -119,23 +116,64 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(233, 227, 223);
+  color: rgb(255, 255, 255);
+  background-color: #fdad52;
 }
 
 .hearts {
-  color: #cf94ff;
+  background-color: #cf94ff;
 }
 
 .spades {
-  color: #94a7ff;
+  background-color: #94a7ff;
 }
 
 .clovers {
-  color: #cf94ff;
+  background-color: #cf94ff;
 }
 
 .diamonds {
-  color: #94a7ff;
+  background-color: #94a7ff;
+}
+
+.unknown {
+  background-color: #fdad52;
+}
+
+.ballSize-2rem {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: #94a7ff;
+  display: inline-block;
+}
+
+.ballSize-3rem {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  background-color: #94a7ff;
+  display: inline-block;
+}
+
+.ballSize-4rem {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  background-color: #94a7ff;
+  display: inline-block;
+}
+
+.ballColor-one {
+  background-color: #94a7ff;
+}
+
+.ballColor-two {
+  background-color: #cf94ff;
+}
+
+.ballColor-three {
+  background-color: #fdad52;
 }
 
 .ray {

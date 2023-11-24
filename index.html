@@ -881,18 +881,17 @@
           <h2 class="pillHeading">SASS</h2>
         </div>
       </div>
-      <h3>Syntax</h3>
 
+      <!-- ----------------------------------- SASS SYNTAX  ----------------------------------- -->
+      <h3>Syntax</h3>
       <div class="contentContainer">
 
-        <p>be consistent in your naming convention</p>
+        <!-- VARIABLES ------------------------------------->
         <div class="subContentContainer ">
-
-
           <h4>✦ variables </h4>
           <p>be consistent in your naming convention</p>
           <div class="code">
-            <div class="sassVars">
+            <div class="sassVars code">
               <div>
                 $color-1: #94a7ff;
                 <div class="colorBox box1"></div>
@@ -912,10 +911,10 @@
                 $alternate-border: 5px solid $color-3;
               </div>
             </div>
-
           </div>
         </div>
 
+        <!-- NESTING  ------------------------------------->
         <div class="subContentContainer ">
           <h4>✦ nesting </h4>
           <div class=" code indentingCode">
@@ -937,10 +936,9 @@
           </div>
         </div>
 
+        <!-- VARIABLES ------------------------------------->
         <div class="subContentContainer ">
-          <h4>✦ & </h4>
-
-
+          <h4>✦ & : parent selector</h4>
           <div class=" code indentingCode">
             .sassyContainer {
             <div>
@@ -968,17 +966,17 @@
             }
           </div>
 
-          <!-- EXAMPLE FOR ALL SASS ABOVE -->
+          <!-- EXAMPLE FOR ALL SASS ABOVE -------------->
           <div class="sassyParent">
             <div class="sassyChild">
             </div>
           </div>
-          <!-- -->
+          <!-- END OF EXAMPLE-->
 
         </div>
 
+        <!-- @MIXIN & @INCLUDE ------------------------------------->
         <div class="subContentContainer ">
-
           <h4>✦ Mixin : @mixin @include</h4>
           <p>In Sass, a mixin lets you make groups of CSS declarations that you want to reuse throughout your site.</p>
           <p>Mixin can (& should) take an argument(s) ($argument)</p>
@@ -997,7 +995,6 @@
             </div>
             } <br>
             <br>
-            <br>
             span {
             <div>
               @include dashed-border(3px);<br>
@@ -1005,14 +1002,12 @@
             </div>
             }<br>
             <br>
-            <br>
             p {
             <div>
               @include dashed-border(3px, green); <br>
               //passes both arguments
             </div>
             } <br>
-            <br>
             <br>
             div {
             <div>
@@ -1037,13 +1032,18 @@
         </div>
 
       </div>
+      <!-- END OF SYNTAX--->
 
+
+      <!-- ----------------------------------- SASS LOGIC  ----------------------------------------------- -->
       <h3>Logic</h3>
       <div class="contentContainer">
 
+        <!-- FUNCTIONS & OPERATIONS ------------------------------------->
         <div class="subContentContainer ">
           <h4>✦ <strong>Functions & operations </strong></h4>
 
+          <!-- FADE-OUT -->
           <div class="subSub">
             <p class="subSubTitle">Fade-out function</p>
             <div>
@@ -1057,6 +1057,7 @@
             </div>
           </div>
 
+          <!-- FADE-IN -->
           <div class="subSub">
             <p class="subSubTitle"> Fade-in function</p>
             <div>
@@ -1069,6 +1070,7 @@
             </div>
           </div>
 
+          <!-- ADJUST-HUE -->
           <div class="subSub">
             <p class="subSubTitle">Adjust-hue function </p>
             <div>
@@ -1082,6 +1084,7 @@
             </div>
           </div>
 
+          <!-- NUMERIC -->
           <div class="subSub">
             <p class="subSubTitle"> numeric operations </p>
             <div>
@@ -1103,24 +1106,29 @@
               </div>
             </div>
           </div>
+
+
         </div>
+        <!-- END OF FUNCT & OPS -->
 
 
+        <!-- FLOW CONTROL RULES ------------------------------------->
         <div class="subContentContainer ">
           <h4>✦ <strong>Flow Control Rules</strong></h4>
 
+          <!-- @IF ELSE -->
           <div class="subSub">
             <p class="subSubTitle">@if @else </p>
             <div>
               <p>
-                fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
-                or the alpha channel, by that amount
+                @if rule executes a block of code if a specified expression is true and skips it if the expression is
+                false.
               </p>
               <p class="code">
                 @if $expression-that-returns-true-or-false { ... }
               </p>
               <p class="code">
-                width: if( $condition, $value-if-true, $value-if-false);n
+                width: if( $condition, $value-if-true, $value-if-false);
               </p>
               <div class="code indentingCode">
                 @mixin deck($suit) {
@@ -1147,66 +1155,123 @@
                 </div>
                 }
               </div>
-
               <div>
                 <div class="card hearts">
-                  <div class="hearts">Heart</div>
+                  <div class="hearts">Heart ♥︎</div>
                 </div>
-                <div class="card spades">Spade</div>
-                <div class="card clovers">Clover</div>
-                <div class="card diamonds">Diamond</div>
-                <div class="card ">Unknown Suit</div>
+                <div class="card spades">Spade ♠︎</div>
+                <div class="card clovers">Clover ♣︎</div>
+                <div class="card diamonds">Diamond ♦︎</div>
+                <div class="card ">Unknown Suit ❁ </div>
               </div>
             </div>
           </div>
 
 
-
+          <!-- @EACH-->
           <div class="subSub">
             <p class="subSubTitle">@each</p>
+
             <div>
+
               <p>
-                fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
-                or the alpha channel, by that amount
+                The @each rule simplifies applying styles or running code for
+                <strong> each item in a list </strong> or <strong> each pair in a map </strong>.
               </p>
 
-              <div class="code indentingCode">
-                $list: (
-                <div>
-                  orchid, <br>
-                  cornflowerblue,<br>
-                  orange<br>
+              <!-- with Lists -->
+              <div>
+                <p class="sectionOfSubSub">
+                  With Lists :
+                </p>
+                <p>
+                  It’s great <strong> for repetitive styles </strong> that only have a few variations between them. <br>
+                  <br>
+                  It’s usually written :
+                </p>
+                <p>
+                  @each &lt;variable&gt; in &lt;expression&gt; { ... }
+                </p>
+                <p>
+                  where the <strong> expression returns a list </strong> .
+                  The block is evaluated for <strong> each </strong> element of the <strong> list </strong> in turn,
+                  which is assigned to the given variable name.
+                </p>
+                <div class="code indentingCode">
+                  $sizesList: 1rem, 2rem, 3rem;
                 </div>
-                );<br>
-                <br>
-                // each-loop <br>
-                @each $item in $list {
-                <div>
-                  .#{$item} {
+                <div class="code indentingCode">
+                  @each $size in $sizesList {
                   <div>
-                    background: $item;
+                    .ball-#{$size} {
+                    <div>
+                      width: $size;<br>
+                      height: $size;<br>
+                      border-radius: $size;<br>
+                      background-color: #94a7ff;<br>
+                    </div>
+                    }
                   </div>
                   }
                 </div>
-                }
+
+                <div class="ballSize-2rem"> </div>
+                <div class="ballSize-3rem"></div>
+                <div class="ballSize-4rem"></div>
               </div>
 
-              <div class="orchid"> div class="orchid"</div>
-              <div class="cornflowerblue"> div class="cornflowerblue"</div>
-              <div class="orange"> div class="orange"</div>
+              <!-- with Maps -->
+              <div>
+                <p class="sectionOfSubSub">
+                  With Maps :
+                </p>
+                <p>
+                  You can also use @each to iterate over every <strong> key/value pair </strong> in a map by writing it:
+                </p>
+                <p>@each &lt;key-variable&gt;, &lt;value-variable&gt; in &lt;expression&gt; { ... }</p>
+                <p>
+                  The <strong> key </strong> is assigned to the <strong> first variable </strong> name, <br>
+                  and the <strong> element </strong> is assigned to the <strong> second </strong>.
+                </p>
+
+                <div class="code indentingCode">
+                  $ballColorsList : ('one': $color-1, 'two': $color-2, 'three': $color-3);
+                </div>
+                <div class="code indentingCode">
+                    @each $name, $color in $ballColorsList {
+                  <div>
+                    .ballColor-#{$name} {
+                    <div>
+                      background-color: $color;
+                    </div>
+                    }
+                  </div>
+                  }
+                </div>
+                <div class="ballSize-2rem ballColor-one"></div>
+                <div class="ballSize-3rem ballColor-two"></div>
+                <div class="ballSize-4rem ballColor-three"></div>
+              </div>
+
 
             </div>
           </div>
 
 
-
+          <!-- @FOR-->
           <div class="subSub">
             <p class="subSubTitle">@for</p>
             <div>
               <p>
-                fade-out makes a color more transparent by taking a number between 0 and 1 and decreasing opacity,
-                or the alpha channel, by that amount
+                The @for rule iterates over a range of numbers, starting from the result of the first expression
+                and going up <strong> to (excluding) </strong> or <strong> through (including) </strong> the result of
+                the second expression. <br>
+                It evaluates a block of code for each number in the range,<br>
+                with the <strong> current number assigned to the specified variable </strong>.
               </p>
+              <p>@for &lt;variable&gt; from &lt;expression&gt; to &lt;expression&gt; { ... } </p>
+              <p>or</p>
+              <p>@for &lt;variable&gt; from &lt;expression&gt; through &lt;expression&gt; { ... } </p>
               <div>
                 <p class="code">
                   $total: 10; //Number of .ray divs in our html
@@ -1221,9 +1286,7 @@
                   </div>
                   }
                 </div>
-
                 <div class="code indentingCode">
-                  //FOR LOOP : <br>
                   @for $i from 1 through $total {
                   <div>
                     .ray:nth-child(#{$i}) {
@@ -1236,32 +1299,33 @@
                   </div>
                   }
                 </div>
-
               </div>
-      </div> 
-
-              <div class='ray'></div>
-              <div class='ray'></div>
-              <div class='ray'></div>
-              <div class='ray'></div>
-              <div class='ray'></div>
-              <div class='ray'></div>
-              <div class='ray'></div>
-              <div class='ray'></div>
-              <div class='ray'></div>
-              <div class='ray'></div>
             </div>
+            <div class='ray'></div>
+            <div class='ray'></div>
+            <div class='ray'></div>
+            <div class='ray'></div>
+            <div class='ray'></div>
+            <div class='ray'></div>
+            <div class='ray'></div>
+            <div class='ray'></div>
+            <div class='ray'></div>
+            <div class='ray'></div>
           </div>
+        </div>
 
-          <div>
-            <p>
-              @while is necessary for a few particularly complex stylesheets, 
-              you’re usually better of using either @each or @for if either of them will work. 
-              They’re clearer for the reader, 
-              and often faster to compile as well.
-            </p>
-          </div>
 
+        <!-- WHILE -->
+        <div>
+          <p>
+            @while is necessary for a few particularly complex stylesheets,
+            you’re usually better off using either @each or @for if either of them will work.
+            They’re clearer for the reader,
+            and often faster to compile as well.
+          </p>
+        </div>
+
+        <!-- SEE MORE BUTTON -->
         <div class="seeMoreContainer">
           <p>see more: </p>
           <div class="seeMoreWrapper">
@@ -1271,9 +1335,8 @@
           </div>
         </div>
       </div>
-
-
       </div>
+      <!-- END FLOW CONTROL RULES -->
 
 
 
