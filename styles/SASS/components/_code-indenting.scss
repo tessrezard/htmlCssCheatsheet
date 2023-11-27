@@ -1,0 +1,30 @@
+
+.code-indenting {
+    @extend .code;
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
+    border: 10px solid $code-yellow;
+    // border-right: 10px+0.5rem solid $code-yellow;
+    background-color: $indent-color-0;
+    @include nested-indents(0); // Initial indentation
+
+    div {
+        @include nested-indents(1); // Nested indentation level 1
+        background-color: $indent-color-1;
+
+        div {
+            @include nested-indents(2); // Nested indentation level 2
+            background-color: $indent-color-2;
+
+            div {
+                @include nested-indents(3); // Nested indentation level 3
+                background-color: $indent-color-3;
+
+                div {
+                    @include nested-indents(4); // Nested indentation level 4
+                    background-color: $indent-color-4;
+                }
+            }
+        }
+    }
+}

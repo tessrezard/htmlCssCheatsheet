@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./styles/CSS/grid.css" type="text/css">
   <link rel="stylesheet" href="./styles/CSS/fonts.css" type="text/css">
 
-  <link rel="stylesheet" href="./styles/SASS/sassy.css" type="text/css">
+  <link rel="stylesheet" href="./styles/SASS/main.css" type="text/css">
 
   <link rel="icon" href="icon32x32.png" />
   <link rel="apple-touch-icon" href="icon32x32.png" />
@@ -891,7 +891,7 @@
           <h4>✦ variables </h4>
           <p>be consistent in your naming convention</p>
           <div class="code">
-            <div class="sassVars code">
+            <div class="column-of-rows">
               <div>
                 $color-1: #94a7ff;
                 <div class="colorBox box1"></div>
@@ -905,10 +905,10 @@
                 <div class="colorBox box3"></div>
               </div>
               <div>
-                $standard-border: 5px solid $color-2;
+                $border-standard: 5px solid $color-2;
               </div>
               <div>
-                $alternate-border: 5px solid $color-3;
+                $border-alternate: 5px solid $color-3;
               </div>
             </div>
           </div>
@@ -917,13 +917,13 @@
         <!-- NESTING  ------------------------------------->
         <div class="subContentContainer ">
           <h4>✦ nesting </h4>
-          <div class=" code indentingCode">
+          <div class="code-indenting">
             .sassyParent {
             <div>
               background-color: $color-1;<br>
               border : {
               <div>
-                top: $standard-border;
+                top: $border-standard;
               </div>
               }<br>
               .sassyChild {
@@ -939,7 +939,7 @@
         <!-- VARIABLES ------------------------------------->
         <div class="subContentContainer ">
           <h4>✦ & : parent selector</h4>
-          <div class=" code indentingCode">
+          <div class="code-indenting">
             .sassyContainer {
             <div>
               &:hover{
@@ -982,8 +982,8 @@
           <p>Mixin can (& should) take an argument(s) ($argument)</p>
           <p>Mixin arguments can be assigned a default value in mixin definition.</p>
 
-          <div class=" code indentingCode">
-            @mixin dashed-border($width, $color: #fff) {
+          <div class=" code-indenting ">
+            @mixin border-dashed($width, $color: #fff) {
             <div>
               border: {
               <div>
@@ -997,21 +997,21 @@
             <br>
             span {
             <div>
-              @include dashed-border(3px);<br>
+              @include border-dashed(3px);<br>
               //only passes non-default argument
             </div>
             }<br>
             <br>
             p {
             <div>
-              @include dashed-border(3px, green); <br>
+              @include border-dashed(3px, green); <br>
               //passes both arguments
             </div>
             } <br>
             <br>
             div {
             <div>
-              @include dashed-border(color: purple, width: 5px); <br>
+              @include border-dashed(color: purple, width: 5px); <br>
               //passes out of order but explicitly defined <br>
             </div>
             } <br>
@@ -1021,7 +1021,7 @@
 
         <div class="subContentContainer ">
           <h4>✦ interpolation</h4>
-          <div class=" code indentingCode">
+          <div class="  code-indenting">
             @mixin photo-content($file) {
             <div>
               content: url(#{$file}.jpg);<br>
@@ -1035,7 +1035,7 @@
       <!-- END OF SYNTAX--->
 
 
-      <!-- ----------------------------------- SASS LOGIC  ----------------------------------------------- -->
+      <!-- ----------------------------------- SASS LOGIC ----------------------------------------------- -->
       <h3>Logic</h3>
       <div class="contentContainer">
 
@@ -1130,7 +1130,7 @@
               <p class="code">
                 width: if( $condition, $value-if-true, $value-if-false);
               </p>
-              <div class="code indentingCode">
+              <div class=" code-indenting">
                 @mixin deck($suit) {
                 <div>
                   @if($suit == diamonds or $suit == spades){
@@ -1197,10 +1197,10 @@
                   The block is evaluated for <strong> each </strong> element of the <strong> list </strong> in turn,
                   which is assigned to the given variable name.
                 </p>
-                <div class="code indentingCode">
+                <div class=" code-indenting">
                   $sizesList: 1rem, 2rem, 3rem;
                 </div>
-                <div class="code indentingCode">
+                <div class=" code-indenting">
                   @each $size in $sizesList {
                   <div>
                     .ball-#{$size} {
@@ -1234,11 +1234,11 @@
                   and the <strong> element </strong> is assigned to the <strong> second </strong>.
                 </p>
 
-                <div class="code indentingCode">
+                <div class=" code-indenting">
                   $ballColorsList : ('one': $color-1, 'two': $color-2, 'three': $color-3);
                 </div>
-                <div class="code indentingCode">
-                    @each $name, $color in $ballColorsList {
+                <div class=" code-indenting">
+                  @each $name, $color in $ballColorsList {
                   <div>
                     .ballColor-#{$name} {
                     <div>
@@ -1279,14 +1279,14 @@
                 <p class="code">
                   $step: 360deg / $total; //Used to compute the hue based on color-wheel
                 </p>
-                <div class="code indentingCode">
+                <div class=" code-indenting">
                   .ray {
                   <div>
                     height: 30px;
                   </div>
                   }
                 </div>
-                <div class="code indentingCode">
+                <div class=" code-indenting">
                   @for $i from 1 through $total {
                   <div>
                     .ray:nth-child(#{$i}) {

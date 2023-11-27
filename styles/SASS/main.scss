@@ -1,0 +1,144 @@
+@import 'helpers/mixins';
+@import 'helpers/placeholders';
+@import 'helpers/variables';
+@import 'helpers/functions';
+
+// This cheatsheet is not a react app. 
+// I find the modular component structure most instinctual, 
+// so the things that would have been a component in a react app i am putting in 
+// the component folder of Sass
+
+@import 'components/code-indenting';
+@import 'components/sub-sections';
+
+
+//this is a class already declared in styleCheatsheet.css but put here so i can use to extend
+.code {
+    font-family: monospace;
+    background-color: rgb(255, 237, 98);
+    background-color: var(--yellow);
+    width: fit-content;
+    font-size: 0.9rem;
+    color: var(--mainText);
+    line-height: 1.75rem;
+}
+
+.column-of-rows {
+    display: flex;
+    flex-flow: column;
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.colorBox {
+    height: 15px;
+    width: 15px;
+    position: relative;
+    display: flex;
+    z-index: 3;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5rem;
+}
+
+.box1 {
+    background-color: $color-1;
+}
+
+.box2 {
+    background-color: $color-2;
+}
+
+.box3 {
+    background-color: $color-3;
+}
+
+
+
+.sassyParent {
+    width: 200px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-1;
+
+    border : {
+        top: $border-standard;
+        bottom: $border-standard;
+        right: $border-alternate;
+        left: $border-alternate;
+    }
+
+    &:hover {
+        background-color: $color-3;
+
+        .sassyChild {
+            background-color: $color-1;
+        }
+    }
+
+    .sassyChild {
+        width: 70px;
+        height: 30px;
+        background-color: $color-3;
+        margin: auto;
+
+        &:hover {
+            background-color: $color-2;
+        }
+    }
+}
+
+
+
+// I can't seem to find a definitive answer in the documentation about 
+// where the flow-control rules should be in file structure of Sass. 
+// I have put the @for, @each, etc, in helpers/functions. 
+// I don't know if this is right, it seems odd to me that the this mean that the 
+// elements with flow-controlled styling are only found in functions.scss. ?
+
+
+// used in IF, ELSE IF 
+.card {
+    width: 100px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: $color-3;
+}
+
+.hearts {
+    @include deck(hearts);
+}
+
+.spades {
+    @include deck(spades);
+}
+
+.clovers {
+    @include deck(clovers);
+}
+
+.diamonds {
+    @include deck(diamonds);
+}
+
+.unknown {
+    @include deck(unknown);
+}
+
+
+
+// used in FOR loop
+.ray {
+    height: 30px;
+}

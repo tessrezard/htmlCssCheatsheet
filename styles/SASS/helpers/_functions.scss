@@ -1,0 +1,34 @@
+
+// I can't seem to find a definitive answer in the documentation about 
+// where the flow-control rules should be in file structure of Sass. 
+// I have put the @for, @each, etc, in helpers/functions. 
+// I don't know if this is right, it seems odd to me that the this mean that the 
+// elements with flow-controlled styling are only found in functions.scss. ?
+
+
+// EACH loop #1
+@each $size in $sizesList {
+    .ballSize-#{$size} {
+        width: $size;
+        height: $size;
+        border-radius: $size;
+        background-color: #94a7ff;
+        display: inline-block;
+    }
+}
+
+// EACH loop #2
+@each $name, $color in $ballColorsList {
+    .ballColor-#{$name} {
+        background-color: $color;
+    }
+}
+
+// FOR loop
+@for $i from 1 through $total {
+    .ray:nth-child(#{$i}) {
+        background: adjust-hue($color-1, $i * $step);
+        width: if($i % 2==0, 150px, 200px);
+        margin-left: if($i % 2==0, 50px, 0px);
+    }
+}

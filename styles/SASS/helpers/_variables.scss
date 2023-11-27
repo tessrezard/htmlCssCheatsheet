@@ -1,0 +1,30 @@
+// Three lead colours for sass examples
+$color-1: #94a7ff;
+$color-2: #cf94ff;
+$color-3: #fdad52;
+
+// Code color from regular css styleCheatsheet.css
+$code-yellow: #FFD913;
+
+// For indenting code 
+$indent-color-0 : #FFD913;
+$indent-color-1 : #efd44b;
+$indent-color-2 : #f9e893;
+$indent-color-3 : #fff5d1;
+$indent-color-4 : #ffffff;
+$indentation: 0.75rem;
+
+
+// Green for SubsubTitle
+$green : #4f7d43;
+
+$border-standard: 5px solid $color-2;
+$border-alternate: 5px solid $color-3;
+
+// Used in EACH loop
+$sizesList: 2rem, 3rem, 4rem;
+$ballColorsList : ('one': $color-1, 'two': $color-2, 'three': $color-3);
+
+// Used in FOR loop
+$total: 10; //Number of .ray divs in html
+$step: 360deg / $total; //Used to compute the hue based on color-wheel

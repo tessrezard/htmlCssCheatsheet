@@ -1,0 +1,18 @@
+@mixin nested-indents($depth) {
+    $indent: $depth * $indentation;
+    margin-left: $indent;
+}
+
+
+// -IF, ELSE IF 
+@mixin deck($suit) {
+    @if($suit == diamonds or $suit == spades){
+      background-color: $color-1;
+    }
+    @else if($suit == clovers or $suit == hearts ){
+      background-color: $color-2;
+    }
+    @else {
+        background-color: $color-3;
+    }
+   }

@@ -1,0 +1,31 @@
+
+//These are poorly named selectors - should change
+
+.subSub {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 7px solid #d5eda5;
+    border-radius: 10px;
+
+    .subSubTitle {
+        color: $green;
+        font-size: 1.1rem;
+        font-weight: 700;
+
+        div {
+            margin-right: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .sectionOfSubSub {
+        font-weight: 700px;
+        color: $green;
+        // i just personally don't like the look of underline
+        border-bottom: 1px solid $green;
+        margin: 1rem
+    }
+}

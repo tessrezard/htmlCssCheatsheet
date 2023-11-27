@@ -1,0 +1,252 @@
+.ballSize-2rem {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: #94a7ff;
+  display: inline-block;
+}
+
+.ballSize-3rem {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  background-color: #94a7ff;
+  display: inline-block;
+}
+
+.ballSize-4rem {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  background-color: #94a7ff;
+  display: inline-block;
+}
+
+.ballColor-one {
+  background-color: #94a7ff;
+}
+
+.ballColor-two {
+  background-color: #cf94ff;
+}
+
+.ballColor-three {
+  background-color: #fdad52;
+}
+
+.ray:nth-child(1) {
+  background: #c194ff;
+  width: 200px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(2) {
+  background: #ff94fd;
+  width: 150px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(3) {
+  background: #ff94bc;
+  width: 200px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(4) {
+  background: #ffac94;
+  width: 150px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(5) {
+  background: #ffec94;
+  width: 200px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(6) {
+  background: #d2ff94;
+  width: 150px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(7) {
+  background: #94ff96;
+  width: 200px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(8) {
+  background: #94ffd7;
+  width: 150px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(9) {
+  background: #94e7ff;
+  width: 200px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(10) {
+  background: #94a7ff;
+  width: 150px;
+  margin-left: 50px;
+}
+
+.code-indenting {
+  margin-bottom: 1rem;
+  line-height: 1.75rem;
+  border: 10px solid #FFD913;
+  background-color: #FFD913;
+  margin-left: 0rem;
+}
+.code-indenting div {
+  margin-left: 0.75rem;
+  background-color: #efd44b;
+}
+.code-indenting div div {
+  margin-left: 1.5rem;
+  background-color: #f9e893;
+}
+.code-indenting div div div {
+  margin-left: 2.25rem;
+  background-color: #fff5d1;
+}
+.code-indenting div div div div {
+  margin-left: 3rem;
+  background-color: #ffffff;
+}
+
+.subSub {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 7px solid #d5eda5;
+  border-radius: 10px;
+}
+.subSub .subSubTitle {
+  color: #4f7d43;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.subSub .subSubTitle div {
+  margin-right: 2rem;
+}
+.subSub .subSubTitle p {
+  font-size: 1rem;
+}
+.subSub .sectionOfSubSub {
+  font-weight: 700px;
+  color: #4f7d43;
+  border-bottom: 1px solid #4f7d43;
+  margin: 1rem;
+}
+
+.code, .code-indenting {
+  font-family: monospace;
+  background-color: rgb(255, 237, 98);
+  background-color: var(--yellow);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  color: var(--mainText);
+  line-height: 1.75rem;
+}
+
+.column-of-rows {
+  display: flex;
+  flex-flow: column;
+}
+.column-of-rows div {
+  display: flex;
+  flex-direction: row;
+}
+
+.colorBox {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  display: flex;
+  z-index: 3;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0.5rem;
+}
+
+.box1 {
+  background-color: #94a7ff;
+}
+
+.box2 {
+  background-color: #cf94ff;
+}
+
+.box3 {
+  background-color: #fdad52;
+}
+
+.sassyParent {
+  width: 200px;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #94a7ff;
+  border-top: 5px solid #cf94ff;
+  border-bottom: 5px solid #cf94ff;
+  border-right: 5px solid #fdad52;
+  border-left: 5px solid #fdad52;
+}
+.sassyParent:hover {
+  background-color: #fdad52;
+}
+.sassyParent:hover .sassyChild {
+  background-color: #94a7ff;
+}
+.sassyParent .sassyChild {
+  width: 70px;
+  height: 30px;
+  background-color: #fdad52;
+  margin: auto;
+}
+.sassyParent .sassyChild:hover {
+  background-color: #cf94ff;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: #fdad52;
+}
+
+.hearts {
+  background-color: #cf94ff;
+}
+
+.spades {
+  background-color: #94a7ff;
+}
+
+.clovers {
+  background-color: #cf94ff;
+}
+
+.diamonds {
+  background-color: #94a7ff;
+}
+
+.unknown {
+  background-color: #fdad52;
+}
+
+.ray {
+  height: 30px;
+}/*# sourceMappingURL=main.css.map */
